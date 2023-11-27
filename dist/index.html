@@ -20,18 +20,40 @@
 						<li><a href="search">Поиск</a></li>
 						<li><a href="search-empty">Поиск пустой</a></li>
 						<li><a href="library">Библиотека защиты</a></li>
+						<li><a href="news">Новости</a></li>
 						<li><a href="technologies">Технологии</a></li>
 						<li><a href="lk-profile">[ЛК] Профиль</a></li>
 						<li><a href="lk-distributor">[ЛК] Дистрибьюторское соглашение</a></li>
 						<li><a href="lk-marketing">[ЛК] Программа маркетинговой поддержки</a></li>
 						<li><a href="lk-materials">[ЛК] POS-материалы</a></li>
 						<li><a href="lk-loyalty">[ЛК] Программа лояльности</a></li>
+						<li><a href="contacts">Контакты</a></li>
 						<li><a href="404">404</a></li>
 					</ul>
 				</div>
 			</main>
 		</div>
 		<div class="modals">
+			<div class="modal success" id="fancy-modal-success" style="display: none">
+				<h2 class="success__title">Отправлено</h2>
+				<div class="success__txt">Спасибо. Мы свяжемся с вами<br>в ближайшее время.</div><button class="button button--blue success__close" data-fancybox-close><span>Закрыть</span>
+					<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_666_9358)">
+								<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+								<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+							</g>
+							<defs>
+								<clipPath id="clip0_666_9358">
+									<rect width="20" height="20" fill="white"></rect>
+								</clipPath>
+							</defs>
+						</svg></div>
+				</button>
+			</div>
+			<div class="modal" id="fancy-modal-login" style="display: none">
+				<h2 class="modal__title">Личный кабинет дистрибьютора</h2>
+				<form class="write-us-form" data-login-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Логин</span></label><label class="form-label light"><input class="form-input light" type="password" required data-input><span class="form-placeholder">Пароль</span></label><button class="button button--blue write-us-form__submit" type="submit"><span>Отправить</span></button></form>
+			</div>
 			<div class="side-modal" id="fancy-modal-policy" style="display: none">
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs__list">
@@ -77,7 +99,11 @@
 			</div>
 			<div class="modal" id="fancy-modal-write" style="display: none">
 				<h2 class="modal__title">Написать нам</h2>
-				<form><label class="form-label"><input class="form-input" required data-input><span class="form-placeholder">ФИО</span></label></form>
+				<form class="write-us-form" data-write-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Имя</span></label><label class="form-label light"><input class="form-input light" type="tel" required data-input data-mask-phone><span class="form-placeholder">Телефон</span></label><label class="form-label light"><input class="form-input light" type="email" required data-input><span class="form-placeholder">E-mail</span></label><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Страна, город</span></label><label class="form-label light"><textarea class="form-input form-textarea" data-input></textarea><span class="form-placeholder">Сообщение</span></label>
+					<div class="write-us-form__bottom">
+						<div class="form-note" data-fancy-button="policy">Нажимая на кнопку «Отправить», вы даете согласие на <span class="red">Политику конфиденциальности</span></div><button class="button button--blue write-us-form__submit" type="submit"><span>Отправить</span></button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
