@@ -51,8 +51,8 @@
 									</svg></div>
 							</button></div>
 					</div>
-					<div class="header__row"><a class="header__logo" href=""><img src="assets/images/svg/logo.svg" alt="logo"></a><button class="button button--red header__catalog" data-catalog-button><span>Каталог СИЗ рук</span>
-							<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div class="header__row"><a class="header__logo" href=""><img src="assets/images/svg/logo.svg" alt="logo"></a><button class="button button--red header__catalog" data-fancy-button="catalog"><span>Каталог СИЗ рук</span>
+							<div class="button__ico"><svg class="default-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_666_9348)">
 										<path d="M16 4.80343L15.1966 4L9.9169 9.28023L4.63667 4L3.83324 4.80343L9.9169 10.8871L16 4.80343Z" fill="white"></path>
 										<path d="M16 11.6218L15.1965 10.8184L9.91687 16.0986L4.63664 10.8184L3.83321 11.6218L9.91687 17.7055L16 11.6218Z" fill="white"></path>
@@ -62,6 +62,9 @@
 											<rect width="20" height="20" fill="white"></rect>
 										</clipPath>
 									</defs>
+								</svg><svg class="active-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 								</svg></div>
 						</button><button class="button button--blue only-desktop"><span>Подобрать защитное решение</span>
 							<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,10 +97,13 @@
 									<path d="M17 18.5C17 15.275 13.95 12.5 10 12.5C6.05001 12.5 3 15.275 3 18.5" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 									<path d="M7 19C7 19 7 16.5 10 16.5C13 16.5 13 19 13 19" stroke="#507E9B" stroke-width="1.5"></path>
 								</svg></div>
-						</button><button class="burger only-mobile"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						</button><button class="burger only-mobile" data-fancy-button="mobile-menu"><svg class="default-ico" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 3H15" stroke="#507E9B" stroke-width="1.5"></path>
 								<path d="M1 8H15" stroke="#507E9B" stroke-width="1.5"></path>
 								<path d="M1 13H15" stroke="#507E9B" stroke-width="1.5"></path>
+							</svg><svg class="active-ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 							</svg></button></div>
 				</div>
 			</header>
@@ -224,6 +230,82 @@
 			</footer>
 		</div>
 		<div class="modals">
+			<div class="mobile-menu" id="fancy-modal-mobile-menu">
+				<div class="mobile-menu__top"><button class="button button--blue"><span>Подобрать защитное решение</span>
+						<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_666_9358)">
+									<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+									<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_666_9358">
+										<rect width="20" height="20" fill="white"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</button><button class="button" data-fancy-button="login"><span>Личный кабинет дистрибьютора</span>
+						<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 9.99996C12.3012 9.99996 14.1667 8.13448 14.1667 5.83329C14.1667 3.53211 12.3012 1.66663 10 1.66663C7.69885 1.66663 5.83337 3.53211 5.83337 5.83329C5.83337 8.13448 7.69885 9.99996 10 9.99996Z" stroke="#507E9B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M17 18.5C17 15.275 13.95 12.5 10 12.5C6.05001 12.5 3 15.275 3 18.5" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M7 19C7 19 7 16.5 10 16.5C13 16.5 13 19 13 19" stroke="#507E9B" stroke-width="1.5"></path>
+							</svg></div>
+					</button></div>
+				<ul class="mobile-menu__nav">
+					<li><a href="">О компании</a></li>
+					<li><a href="">Технологии</a></li>
+					<li><a href="">Библиотека защиты</a></li>
+					<li><a href="">Новости</a></li>
+					<li><a href="">Контакты</a></li>
+					<li><a href="">Где купить</a></li>
+				</ul><a class="mobile-menu__tel" href="tel:84950330331">8 495 033-033-1</a>
+				<div class="mobile-menu__bottom"><a class="button button--small" href=""><span>Мы Вконтакте</span>
+						<div class="button__ico"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_841_13370)">
+									<path d="M11.1698 15C6.04493 15 3.1218 11.6216 3 6H5.56715C5.65147 10.1261 7.54399 11.8739 9.04305 12.2342V6H11.4604V9.55856C12.9407 9.40541 14.4958 7.78378 15.0205 6H17.4378C17.0349 8.1982 15.3484 9.81982 14.1492 10.4865C15.3484 11.027 17.2692 12.4414 18 15H15.3391C14.7676 13.2883 13.3436 11.964 11.4604 11.7838V15H11.1698Z" fill="#507E9B"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_841_13370">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</a><button class="button button--blue button--small" data-fancy-button="write"><span>Написать нам</span>
+						<div class="button__ico"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_841_13359)">
+									<path d="M16.6665 15.4998C17.5832 15.4998 18.3332 14.7498 18.3332 13.8332V3.83317C18.3332 2.9165 17.5832 2.1665 16.6665 2.1665H3.33317C2.4165 2.1665 1.6665 2.9165 1.6665 3.83317V18.8332L4.99984 15.4998H16.6665ZM2.49984 16.8215V3.83317C2.49984 3.37359 2.87359 2.99984 3.33317 2.99984H16.6665C17.1261 2.99984 17.4998 3.37359 17.4998 3.83317V13.8332C17.4998 14.2928 17.1261 14.6665 16.6665 14.6665H4.65484L2.49984 16.8215Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M9.99984 9.66667C10.4601 9.66667 10.8332 9.29357 10.8332 8.83333C10.8332 8.3731 10.4601 8 9.99984 8C9.5396 8 9.1665 8.3731 9.1665 8.83333C9.1665 9.29357 9.5396 9.66667 9.99984 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M13.3333 9.66667C13.7936 9.66667 14.1667 9.29357 14.1667 8.83333C14.1667 8.3731 13.7936 8 13.3333 8C12.8731 8 12.5 8.3731 12.5 8.83333C12.5 9.29357 12.8731 9.66667 13.3333 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M6.66634 9.66667C7.12658 9.66667 7.49967 9.29357 7.49967 8.83333C7.49967 8.3731 7.12658 8 6.66634 8C6.2061 8 5.83301 8.3731 5.83301 8.83333C5.83301 9.29357 6.2061 9.66667 6.66634 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_841_13359">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</button></div>
+			</div>
+			<div class="catalog-modal" id="fancy-modal-catalog" style="display: none">
+				<div class="catalog-modal__inner">
+					<ul class="catalog-modal__list">
+						<li><a href="">Защита от механических воздействий</a></li>
+						<li><a href="">Защита от порезов</a></li>
+						<li><a href="">Защита от вибрации</a></li>
+						<li><a href="">Защита от ударных воздействий</a></li>
+						<li><a href="">Защита от воздействия статического электричества</a></li>
+						<li><a href="">Защита от воды и растворов нетоксичных веществ</a></li>
+					</ul>
+					<ul class="catalog-modal__list">
+						<li><a href="">Защита от химических факторов</a></li>
+						<li><a href="">Защита от пониженных температур</a></li>
+						<li><a href="">Защита от повышенных температур</a></li>
+						<li><a href="">Защита от термических рисков электрической дуги</a></li>
+						<li><a href="">Защита от воздействия электрического тока</a></li>
+					</ul><a class="catalog-modal__banner" href>
+						<div class="catalog-modal__title">Весь каталог</div>
+					</a>
+				</div>
+			</div>
 			<div class="modal success" id="fancy-modal-success" style="display: none">
 				<h2 class="success__title">Отправлено</h2>
 				<div class="success__txt">Спасибо. Мы свяжемся с вами<br>в ближайшее время.</div><button class="button button--blue success__close" data-fancybox-close><span>Закрыть</span>

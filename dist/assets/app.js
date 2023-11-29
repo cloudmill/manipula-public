@@ -95,21 +95,38 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 
 function fancyboxInit() {
-  _t.defaults = _objectSpread(_objectSpread({}, _t.defaults), {}, {
+  var defaults = _objectSpread(_objectSpread({}, _t.defaults), {}, {
     dragToClose: false
   });
   var buttons = document.querySelectorAll('[data-fancy-button]');
   buttons.forEach(function (button) {
     var id = button.getAttribute('data-fancy-button');
     button === null || button === void 0 ? void 0 : button.addEventListener('click', function () {
-      // console.log('CLIIICK', id)
-      _t.close();
-
-      // @ts-ignore
-      _t.show([{
-        src: "#fancy-modal-".concat(id),
-        type: 'inline'
-      }]);
+      _t.defaults = _objectSpread(_objectSpread({}, defaults), {}, {
+        on: {
+          shouldClose: function shouldClose() {
+            button.classList.remove('active');
+          }
+        }
+      });
+      if (button.classList.contains('active')) {
+        _t.close();
+      } else {
+        if (id === 'catalog' || id === 'mobile-menu') {
+          _t.defaults = _objectSpread(_objectSpread({}, _t.defaults), {}, {
+            tpl: {
+              closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M20 20L4 4m16 0L4 20"/></svg></button>',
+              main: "<div class=\"fancybox__container down\" role=\"dialog\" aria-modal=\"true\" aria-label=\"{{MODAL}}\" tabindex=\"-1\"><div class=\"fancybox__backdrop\"></div><div class=\"fancybox__carousel\"></div><div class=\"fancybox__footer\"></div></div>"
+            }
+          });
+        }
+        button.classList.add('active');
+        // @ts-ignore
+        _t.show([{
+          src: "#fancy-modal-".concat(id),
+          type: 'inline'
+        }]);
+      }
     });
   });
 }
