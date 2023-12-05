@@ -118,8 +118,8 @@
 						</ul>
 					</div>
 					<h1 class="h1">Каталог</h1>
-					<div class="catalog-top only-desktop">
-						<div>
+					<div class="catalog-top">
+						<div class="only-desktop">
 							<div class="catalog-top__title">Защитные группы</div>
 							<div class="catalog-top__row">
 								<div class="catalog-filter-all"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,8 +176,8 @@
 							</div>
 						</div>
 						<div>
-							<div class="catalog-top__title">Фильтры</div>
-							<div class="catalog-top__drops">
+							<div class="catalog-top__title only-desktop">Фильтры</div>
+							<div class="catalog-top__drops only-desktop">
 								<div class="dropdown-container">
 									<div class="dropdown" data-dropdown><button class="dropdown-button" data-dropdown-button><span>Отрасли промышленности</span>
 											<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -287,12 +287,41 @@
 									</div>
 								</div>
 							</div>
+							<div class="catalog-top__buttons only-mobile">
+								<div class="catalog-top__button"><span>Защитные группы</span><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M4.01807 10H16.9817" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M10.5 16.4818V3.51819" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									</svg></div>
+								<div class="catalog-top__button"><span>Фильтры</span><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M4.01807 10H16.9817" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M10.5 16.4818V3.51819" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									</svg></div>
+							</div>
+							<div class="catalog-top__checks"><label class="checkbox">
+									<div class="checkbox__container"><input class="checkbox__input" type="checkbox" checked="checked" required><svg class="checkbox__ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" rx="6" fill="white" fill-opacity="0.04"></rect>
+											<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" stroke="white" stroke-opacity="0.1"></rect>
+											<path opacity="0.2" d="M7 11.8235L10.4615 15L17 9" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
+									<div class="checkbox__caption">Новинки</div>
+								</label><label class="checkbox">
+									<div class="checkbox__container"><input class="checkbox__input" type="checkbox" required><svg class="checkbox__ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" rx="6" fill="white" fill-opacity="0.04"></rect>
+											<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" stroke="white" stroke-opacity="0.1"></rect>
+											<path opacity="0.2" d="M7 11.8235L10.4615 15L17 9" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
+									<div class="checkbox__caption">Произведено в России</div>
+								</label><button class="catalog-top__reset only-desktop"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.11008 5.08002C9.98008 4.82002 10.9401 4.65002 12.0001 4.65002C16.7901 4.65002 20.6701 8.53002 20.6701 13.32C20.6701 18.11 16.7901 21.99 12.0001 21.99C7.21008 21.99 3.33008 18.11 3.33008 13.32C3.33008 11.54 3.87008 9.88002 4.79008 8.50002" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M7.87012 5.32L10.7601 2" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M7.87012 5.32001L11.2401 7.78001" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									</svg><span>Сбросить</span></button></div>
 						</div>
 					</div>
 				</div>
 				<div class="search-result">
 					<div class="search-result__table">
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -319,7 +348,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -346,7 +375,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -373,7 +402,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -400,7 +429,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -427,7 +456,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -454,7 +483,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -481,7 +510,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="card" data-fancy-button="product">
 							<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
 							<div class="card__info">
 								<div class="card__category">Перчатки</div>
@@ -714,6 +743,441 @@
 					</div>
 				</form>
 			</div>
+			<div class="product-modal" id="fancy-modal-product" style="display: none">
+				<div class="product-modal-inner">
+					<div class="breadcrumbs only-mobile product-modal-bread">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+							<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">каталог</a></li>
+							<li class="breadcrumbs__item">
+								<div class="breadcrumbs__text"><span class="red">[</span><span>Дэтрион</span><span class="red">]</span></div>
+							</li>
+						</ul>
+					</div>
+					<div class="product-top">
+						<div class="product-pic-container">
+							<div class="product-pic-wrapper">
+								<div class="swiper product-slider" id="product-slider">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide product-slider__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+										<div class="swiper-slide product-slider__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+										<div class="swiper-slide product-slider__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+									</div>
+								</div>
+								<div class="product-slider-controls only-desktop"><button class="slider-control" id="product-slider-prev"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_186_32486)">
+												<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_186_32486">
+													<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+												</clipPath>
+											</defs>
+										</svg></button><button class="slider-control" id="product-slider-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_186_32492)">
+												<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_186_32492">
+													<rect width="20" height="20" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg></button></div>
+								<div class="product-thumbs">
+									<div class="swiper" id="product-thumbs">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide product-thumbs__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+											<div class="swiper-slide product-thumbs__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+											<div class="swiper-slide product-thumbs__slide"><img src="assets/images/product-1.jpg" alt=""></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-info">
+							<div class="breadcrumbs only-desktop">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">каталог</a></li>
+									<li class="breadcrumbs__item">
+										<div class="breadcrumbs__text"><span class="red">[</span><span>Дэтрион</span><span class="red">]</span></div>
+									</li>
+								</ul>
+							</div>
+							<div class="product-top__label">Перчатки</div>
+							<h2 class="product-top__title">Дэтрион MG-162 (ex. TPU-13)</h2>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Где купить</h3>
+								<div class="product-top__where"><a class="button button--blue" href target="_blank"><span>spets.ru</span>
+										<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.75351 11.4226L15.8309 5.34518V9.16667H17.4976V2.5H10.8309V4.16667H14.6524L8.57499 10.2441L9.75351 11.4226ZM15.8333 15.8333V11.6667H14.1667V15.8333H4.16667V5.83333H8.33333V4.16667H4.16667C3.24619 4.16667 2.5 4.91286 2.5 5.83333V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H14.1667C15.0871 17.5 15.8333 16.7538 15.8333 15.8333Z" fill="white"></path>
+											</svg></div>
+									</a><a class="button button--grey" href><span>Дистрибьюторы и партнеры</span>
+										<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_666_9358)">
+													<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+													<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_666_9358">
+														<rect width="20" height="20" fill="white"></rect>
+													</clipPath>
+												</defs>
+											</svg></div>
+									</a><a class="button button--grey" href><span>Маркетплейсы</span>
+										<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_666_9358)">
+													<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+													<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_666_9358">
+														<rect width="20" height="20" fill="white"></rect>
+													</clipPath>
+												</defs>
+											</svg></div>
+									</a></div>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Соответствие стандартам</h3>
+								<div class="product-standart-row"><a class="product-standart-item" href=""><img src="assets/images/product-standart-0.png" alt=""></a><a class="product-standart-item" href=""><img src="assets/images/product-standart-1.png" alt=""></a></div>
+								<ul class="product-standart-list">
+									<li><a href="">ТР ТС 019/2011</a></li>
+									<li><a href="">EN ISO 21420:2020</a></li>
+									<li><a href="">ГОСТ 12.4.252-2013</a></li>
+									<li><a href="">EN 388:2016</a></li>
+									<li><a href="">EN 511:2006</a></li>
+									<li><a href="">ГОСТ Р ЕН 1149-5-2008</a></li>
+								</ul>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Эксплуатационные уровни</h3>
+								<div class="product-levels-row">
+									<div class="product-levels-item"><img src="assets/images/svg/product-level-0.svg" alt="">
+										<div>
+											<div class="product-levels-txt">EN 388:2016</div>
+											<div class="product-levels-txt">4322BP</div>
+										</div>
+									</div>
+									<div class="product-levels-item"><img src="assets/images/svg/product-level-1.svg" alt="">
+										<div>
+											<div class="product-levels-txt">EN 511:2006</div>
+											<div class="product-levels-txt">231</div>
+										</div>
+									</div>
+									<div class="product-levels-item"><img src="assets/images/svg/product-level-1.svg" alt="">
+										<div>
+											<div class="product-levels-txt">EN 511:2006</div>
+											<div class="product-levels-txt">231</div>
+										</div>
+									</div>
+									<div class="product-levels-item"><img src="assets/images/svg/product-level-1.svg" alt="">
+										<div>
+											<div class="product-levels-txt">EN 511:2006</div>
+											<div class="product-levels-txt">231</div>
+										</div>
+									</div>
+									<div class="product-levels-item"><img src="assets/images/svg/product-level-1.svg" alt="">
+										<div>
+											<div class="product-levels-txt">EN 511:2006</div>
+											<div class="product-levels-txt">231</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Защитные свойства</h3>
+								<div class="product-top__text">Класс риска: 2</div>
+								<div class="product-prop-row"><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-0.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-1.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-2.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-0.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-1.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-2.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-0.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-1.png" alt=""></a><a class="product-prop-item" href target="_blank"><img src="assets/images/product-prop-2.png" alt=""></a></div>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Технологии</h3>
+								<div class="product-technolgies-row">
+									<div class="product-technolgies-item"><img src="assets/images/product-techs-0.png" alt=""></div>
+									<div class="product-technolgies-item"><img src="assets/images/product-techs-1.png" alt=""></div>
+								</div>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Характеристики</h3>
+								<div class="characteristics">
+									<div class="characteristics__row">
+										<div class="characteristics__title">Основа</div>
+										<div class="characteristics__value">Полиэфир</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Покрытие</div>
+										<div class="characteristics__value">Полиуретан, термопластичная резина</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Вид покрытия</div>
+										<div class="characteristics__value">Защитные накладки</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Подкладка</div>
+										<div class="characteristics__value">Пенополиуретан</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Манжет</div>
+										<div class="characteristics__value">Трикотажный</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Длина, мм</div>
+										<div class="characteristics__value">250-270</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Размеры</div>
+										<div class="characteristics__value">9, 10, 11</div>
+									</div>
+									<div class="characteristics__row">
+										<div class="characteristics__title">Упаковка, пар</div>
+										<div class="characteristics__value">1, 5, 50</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-top__block product-drops">
+								<div class="dropdown product" data-dropdown><button class="dropdown-button dropdown-button" data-dropdown-button><span>Выбрать город</span>
+										<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_301_33775)">
+													<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_301_33775">
+														<rect width="20" height="20" fill="white"></rect>
+													</clipPath>
+												</defs>
+											</svg></div>
+									</button>
+									<div class="dropdown-drop" data-dropdown-drop style="display: none">
+										<div class="dropdown-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque exercitationem dolore, ullam voluptate nobis officia numquam neque dolor id voluptates unde nulla et ad obcaecati error reprehenderit tenetur ducimus?</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-top__block">
+								<h3 class="product-top__subtitle">Документация</h3>
+								<div class="documents-row"><a class="documents-item" href><img src="assets/images/svg/document.svg" alt="">
+										<div>
+											<div class="documents-title">Листовка</div>
+											<div class="documents-size">188 Кб</div>
+										</div>
+									</a><a class="documents-item" href><img src="assets/images/svg/document.svg" alt="">
+										<div>
+											<div class="documents-title">Инструкции</div>
+											<div class="documents-size">188 Кб</div>
+										</div>
+									</a><a class="documents-item" href><img src="assets/images/svg/document.svg" alt="">
+										<div>
+											<div class="documents-title">Спецка</div>
+											<div class="documents-size">188 Кб</div>
+										</div>
+									</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="product-bottom">
+						<div class="product-bottom-title">
+							<h3>Альтернативные модели</h3>
+							<div class="product-bottom__controls only-desktop"><button class="slider-control" id="product-bottom-prev"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32486)">
+											<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32486">
+												<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+											</clipPath>
+										</defs>
+									</svg></button><button class="slider-control" id="product-bottom-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32492)">
+											<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32492">
+												<rect width="20" height="20" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg></button></div>
+						</div>
+						<div class="swiper" id="product-bottom-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card" data-fancy-button="product">
+										<div class="card__top"><img src="assets/images/product-0.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__category">Перчатки</div>
+											<div class="card__title">Микропол MG-162 (ex. TPU-13)</div>
+											<div class="card-row">
+												<div class="card-row__title">Основа</div>
+												<div class="card-row__value">Интерлок</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Покрытие</div>
+												<div class="card-row__value">Нитрил</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Длина</div>
+												<div class="card-row__value">250-270 мм</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Размеры</div>
+												<div class="card-row__value">8, 9, 10</div>
+											</div>
+											<div class="card-row">
+												<div class="card-row__title">Упаковка</div>
+												<div class="card-row__value">12/120 пар</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalog-filters-modal" id="fancy-modal-filter-group" style="display: none">filter</div>
 		</div>
 	</body>
 
