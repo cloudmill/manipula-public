@@ -9056,10 +9056,9 @@ function swiperInit() {
             modules: [Pagination, Autoplay],
             loop: true,
             speed: 1000,
-            // autoplay: {
-            //   delay: 4000,
-            // },
-
+            autoplay: {
+              delay: 4000
+            },
             pagination: {
               el: "[data-swiper-pagination=".concat(slider_id, "]"),
               type: 'bullets'
