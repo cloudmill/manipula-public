@@ -6059,7 +6059,7 @@ function Parallax(_ref) {
       progress,
       snapGrid
     } = swiper;
-    utils_elementChildren(el, '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').forEach(subEl => {
+    elementChildren(el, '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').forEach(subEl => {
       setTransform(subEl, progress);
     });
     slides.forEach((slideEl, slideIndex) => {
@@ -7658,7 +7658,7 @@ function Autoplay(_ref) {
   };
   const onVisibilityChange = () => {
     if (swiper.destroyed || !swiper.autoplay.running) return;
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     if (document.visibilityState === 'hidden') {
       pausedByInteraction = true;
       pause(true);
@@ -7689,11 +7689,11 @@ function Autoplay(_ref) {
     swiper.el.removeEventListener('pointerleave', onPointerLeave);
   };
   const attachDocumentEvents = () => {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.addEventListener('visibilitychange', onVisibilityChange);
   };
   const detachDocumentEvents = () => {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   };
   on('init', () => {
@@ -9053,18 +9053,17 @@ function swiperInit() {
       switch (slider_id) {
         case 'main':
           slider_options = _objectSpread(_objectSpread({}, slider_options), {}, {
-            modules: [Navigation, Pagination, Parallax],
+            modules: [Pagination, Autoplay],
             loop: true,
-            autoHeight: true,
-            parallax: true,
-            speed: 500,
+            speed: 1000,
+            // autoplay: {
+            //   delay: 4000,
+            // },
+
             pagination: {
               el: "[data-swiper-pagination=".concat(slider_id, "]"),
               type: 'bullets'
-            },
-            breakpoints: _defineProperty({}, 1024, {
-              speed: 1500
-            })
+            }
           });
           break;
         case 'products':
@@ -9081,6 +9080,32 @@ function swiperInit() {
             // },
           });
 
+          break;
+        case 'about':
+          slider_options = _objectSpread(_objectSpread({}, slider_options), {}, {
+            modules: [Navigation, Pagination],
+            pagination: {
+              el: "[data-swiper-pagination=".concat(slider_id, "]"),
+              type: 'bullets'
+            }
+          });
+          break;
+        case 'series':
+        case 'solutions':
+        case 'brands':
+          slider_options = _objectSpread(_objectSpread({}, slider_options), {}, {
+            modules: [Navigation],
+            slidesPerView: 'auto'
+          });
+          break;
+        case 'news':
+          slider_options = _objectSpread(_objectSpread({}, slider_options), {}, {
+            modules: [Navigation],
+            slidesPerView: 'auto',
+            breakpoints: _defineProperty({}, 1024, {
+              slidesPerView: 1
+            })
+          });
           break;
         default:
           break;

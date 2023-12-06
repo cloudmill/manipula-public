@@ -111,8 +111,11 @@
 				<div class="container about-section">
 					<div class="about-top">
 						<picture class="about-top__bg">
+							<source srcset="assets/images/about-top-bg-mob.webp" type="image/webp" media="(max-width: 767px)">
 							<source srcset="assets/images/about-top-bg-mob.jpg" type="image/jpeg" media="(max-width: 767px)">
-							<source srcset="assets/images/about-top-bg-tablet.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1023px)"><img src="assets/images/about-top-bg.jpg" alt="">
+							<source srcset="assets/images/about-top-bg-tablet.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1023px)">
+							<source srcset="assets/images/about-top-bg-tablet.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1023px)">
+							<source srcset="assets/images/about-top-bg.webp" type="image/webp" media="(min-width: 1024px)"><img src="assets/images/about-top-bg.jpg" alt="">
 						</picture>
 						<div class="about-top__text">
 							<div class="breadcrumbs">
@@ -137,16 +140,23 @@
 						<div class="swiper" data-slider-id="about">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<picture><img src="assets/images/about-slide.jpg" alt=""></picture>
+									<picture>
+										<source srcset="assets/images/about-slide.webp" type="image/webp" media="(min-width: 1024px)"><img src="assets/images/about-slide.jpg" alt="">
+									</picture>
 								</div>
 								<div class="swiper-slide">
-									<picture><img src="assets/images/about-slide.jpg" alt=""></picture>
+									<picture>
+										<source srcset="assets/images/about-slide.webp" type="image/webp" media="(min-width: 1024px)"><img src="assets/images/about-slide.jpg" alt="">
+									</picture>
 								</div>
 								<div class="swiper-slide">
-									<picture><img src="assets/images/about-slide.jpg" alt=""></picture>
+									<picture>
+										<source srcset="assets/images/about-slide.webp" type="image/webp" media="(min-width: 1024px)"><img src="assets/images/about-slide.jpg" alt="">
+									</picture>
 								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination about-pagination" data-swiper-pagination="about"></div>
 					</div>
 					<div class="about-cards">
 						<div class="about-cards__item"><img class="about-cards__ico" src="assets/images/svg/about-card-0.svg" alt="">
@@ -162,13 +172,361 @@
 							<div class="about-cards__text"><span>Вклад в будущее страны и общества, реализуемый через социальные инициативы компании, поддержку здорового образа жизни и спортивной культуры как внутри коллектива, так и во внешней деятельности</span></div>
 						</div>
 					</div>
-					<div class="about-series"></div>
+					<div class="about-block">
+						<div class="about-block-title">
+							<h2 class="about-title">Используем лучшие защитные<br>технологии из мировой практики</h2>
+							<div class="controls only-desktop"><button class="slider-control dark" data-prev="series"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32486)">
+											<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32486">
+												<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+											</clipPath>
+										</defs>
+									</svg></button><button class="slider-control dark" data-next="series"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32492)">
+											<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32492">
+												<rect width="20" height="20" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg></button></div>
+						</div>
+						<div class="swiper slider-drop-container" data-slider-id="series">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-0.png" alt="">
+										<div class="series-card__ttl">Dupont™ Kevlar®</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-1.png" alt="">
+										<div class="series-card__ttl">Dyneema® Diamond Technology</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-0.png" alt="">
+										<div class="series-card__ttl">Dupont™ Kevlar®</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-1.png" alt="">
+										<div class="series-card__ttl">Dyneema® Diamond Technology</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-0.png" alt="">
+										<div class="series-card__ttl">Dupont™ Kevlar®</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="series-card"><img class="series-card__logo" src="assets/images/series-logo-1.png" alt="">
+										<div class="series-card__ttl">Dyneema® Diamond Technology</div>
+										<div class="series-card__text">Параарамидное волокно, устойчивое к порезам, истиранию и тепловому воздействию. Не плавится и не поддерживает горение.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-block">
+						<div class="about-block-title">
+							<h2 class="about-title">Разрабатываем и внедряем<br>инновационные решения</h2>
+							<div class="controls only-desktop"><button class="slider-control dark" data-prev="solutions"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32486)">
+											<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32486">
+												<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+											</clipPath>
+										</defs>
+									</svg></button><button class="slider-control dark" data-next="solutions"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_186_32492)">
+											<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_186_32492">
+												<rect width="20" height="20" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg></button></div>
+						</div>
+						<div class="swiper slider-drop-container" data-slider-id="solutions">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide auto-slide">
+									<div class="solutions-card">
+										<div class="solutions-card__info">
+											<div class="solutions-card__title">SlipGrip</div>
+											<div class="solutions-card__text">Матричная технология нанесения ПВХ, увеличивающая механическую прочность, эластичность и обеспечивает надежный сухой захват.</div>
+										</div>
+										<picture class="solutions-card__img"><img src="assets/images/about-solutions-0.jpg" alt=""></picture><img class="solutions-card__logo" src="assets/images/solutions-logo-0.png" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="solutions-card">
+										<div class="solutions-card__info">
+											<div class="solutions-card__title">Sapphire Technology</div>
+											<div class="solutions-card__text">Антипорезный материал на основе высокомодульного полиэтилена с высокой стойкостью к истиранию и раздиру.</div>
+										</div>
+										<picture class="solutions-card__img"><img src="assets/images/about-solutions-1.jpg" alt=""></picture><img class="solutions-card__logo" src="assets/images/solutions-logo-1.png" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="solutions-card">
+										<div class="solutions-card__info">
+											<div class="solutions-card__title">SlipGrip</div>
+											<div class="solutions-card__text">Матричная технология нанесения ПВХ, увеличивающая механическую прочность, эластичность и обеспечивает надежный сухой захват.</div>
+										</div>
+										<picture class="solutions-card__img"><img src="assets/images/about-solutions-0.jpg" alt=""></picture><img class="solutions-card__logo" src="assets/images/solutions-logo-0.png" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="solutions-card">
+										<div class="solutions-card__info">
+											<div class="solutions-card__title">Sapphire Technology</div>
+											<div class="solutions-card__text">Антипорезный материал на основе высокомодульного полиэтилена с высокой стойкостью к истиранию и раздиру.</div>
+										</div>
+										<picture class="solutions-card__img"><img src="assets/images/about-solutions-1.jpg" alt=""></picture><img class="solutions-card__logo" src="assets/images/solutions-logo-1.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-block">
+						<div class="about-block-title">
+							<h2 class="about-title">Брендированные серии</h2>
+							<div class="only-desktop group-buttons"><a class="button button--blue" href=""><span>Каталог</span>
+									<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_666_9358)">
+												<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+												<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_666_9358">
+													<rect width="20" height="20" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg></div>
+								</a>
+								<div class="controls"><button class="slider-control dark" data-prev="brands"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_186_32486)">
+												<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_186_32486">
+													<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+												</clipPath>
+											</defs>
+										</svg></button><button class="slider-control dark" data-next="brands"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_186_32492)">
+												<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_186_32492">
+													<rect width="20" height="20" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg></button></div>
+							</div>
+						</div>
+						<div class="swiper slider-drop-container" data-slider-id="brands">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide auto-slide">
+									<div class="brands-card">
+										<picture class="brands-card__img">
+											<source srcset="assets/images/about-brands-0.webp" type="image/webp"><img src="assets/images/about-brands-0.jpg" alt="">
+										</picture>
+										<div class="brands-card__content">
+											<div class="brands-card__title">Detrion</div>
+											<div class="brands-card__txt">Высокотехнологичная линейка противоударных перчаток с высоким уровнем защиты по нескольким показателям.</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="brands-card">
+										<picture class="brands-card__img">
+											<source srcset="assets/images/about-brands-1.webp" type="image/webp"><img src="assets/images/about-brands-1.jpg" alt="">
+										</picture>
+										<div class="brands-card__content">
+											<div class="brands-card__title">Арамакс</div>
+											<div class="brands-card__txt">Серия защитных решений от порезов с дополнительной стойкостью к высоким температурам</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="brands-card">
+										<picture class="brands-card__img">
+											<source srcset="assets/images/about-brands-0.webp" type="image/webp"><img src="assets/images/about-brands-0.jpg" alt="">
+										</picture>
+										<div class="brands-card__content">
+											<div class="brands-card__title">Detrion</div>
+											<div class="brands-card__txt">Высокотехнологичная линейка противоударных перчаток с высоким уровнем защиты по нескольким показателям.</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide auto-slide">
+									<div class="brands-card">
+										<picture class="brands-card__img">
+											<source srcset="assets/images/about-brands-1.webp" type="image/webp"><img src="assets/images/about-brands-1.jpg" alt="">
+										</picture>
+										<div class="brands-card__content">
+											<div class="brands-card__title">Арамакс</div>
+											<div class="brands-card__txt">Серия защитных решений от порезов с дополнительной стойкостью к высоким температурам</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><a class="button button--blue only-mobile brands-catalog-btn" href=""><span>Каталог</span>
+							<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_666_9358)">
+										<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+										<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_666_9358">
+											<rect width="20" height="20" fill="white"></rect>
+										</clipPath>
+									</defs>
+								</svg></div>
+						</a>
+					</div>
+					<div class="about-block">
+						<div class="about-model-cols">
+							<h2 class="about-title">Бизнес-модель</h2>
+							<div class="responsibility__text"><span>«Манипула Специалист» — вертикально интегрированная компания. Выбранная бизнес-модель позволяет нам эффективно управлять собственными ресурсами, контролировать все этапы зарождения и использования продукта, а также всегда оставаться в тесной связи с дистрибьюторами и конечными потребителями.</span></div>
+						</div>
+						<div class="model-drop-cols">
+							<div>
+								<h3 class="model-drop-title">От производства</h3>
+								<ul class="model-drop-list">
+									<li>
+										<div class="model-drop-mark"></div>
+										<div class="model-drop-mark-line bottom"></div>
+										<div class="dropdown dark" data-dropdown><button class="dropdown-button dropdown-button" data-dropdown-button><span>Подготовка</span>
+												<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_301_33775)">
+															<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+														</g>
+														<defs>
+															<clipPath id="clip0_301_33775">
+																<rect width="20" height="20" fill="white"></rect>
+															</clipPath>
+														</defs>
+													</svg></div>
+											</button>
+											<div class="dropdown-drop" data-dropdown-drop style="display: none">
+												<div class="dropdown-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque exercitationem dolore, ullam voluptate nobis officia numquam neque dolor id voluptates unde nulla et ad obcaecati error reprehenderit tenetur ducimus?</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="model-drop-mark-line top"></div>
+										<div class="model-drop-mark"></div>
+										<div class="dropdown dark" data-dropdown><button class="dropdown-button dropdown-button" data-dropdown-button><span>Производственный комплекс и бэк-офис</span>
+												<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_301_33775)">
+															<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+														</g>
+														<defs>
+															<clipPath id="clip0_301_33775">
+																<rect width="20" height="20" fill="white"></rect>
+															</clipPath>
+														</defs>
+													</svg></div>
+											</button>
+											<div class="dropdown-drop" data-dropdown-drop style="display: none">
+												<div class="dropdown-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque exercitationem dolore, ullam voluptate nobis officia numquam neque dolor id voluptates unde nulla et ad obcaecati error reprehenderit tenetur ducimus?</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="model-drop-title">К потребителю</h3>
+								<ul class="model-drop-list">
+									<li>
+										<div class="model-drop-mark"></div>
+										<div class="model-drop-mark-line bottom"></div>
+										<div class="dropdown dark" data-dropdown><button class="dropdown-button dropdown-button" data-dropdown-button><span>Подготовка</span>
+												<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_301_33775)">
+															<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+														</g>
+														<defs>
+															<clipPath id="clip0_301_33775">
+																<rect width="20" height="20" fill="white"></rect>
+															</clipPath>
+														</defs>
+													</svg></div>
+											</button>
+											<div class="dropdown-drop" data-dropdown-drop style="display: none">
+												<div class="dropdown-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque exercitationem dolore, ullam voluptate nobis officia numquam neque dolor id voluptates unde nulla et ad obcaecati error reprehenderit tenetur ducimus?</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="model-drop-mark-line top"></div>
+										<div class="model-drop-mark"></div>
+										<div class="dropdown dark" data-dropdown><button class="dropdown-button dropdown-button" data-dropdown-button><span>Производственный комплекс и бэк-офис</span>
+												<div class="dropdown-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_301_33775)">
+															<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+														</g>
+														<defs>
+															<clipPath id="clip0_301_33775">
+																<rect width="20" height="20" fill="white"></rect>
+															</clipPath>
+														</defs>
+													</svg></div>
+											</button>
+											<div class="dropdown-drop" data-dropdown-drop style="display: none">
+												<div class="dropdown-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque exercitationem dolore, ullam voluptate nobis officia numquam neque dolor id voluptates unde nulla et ad obcaecati error reprehenderit tenetur ducimus?</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="responsibility">
+						<h2 class="about-title">Социальная ответственность</h2>
+						<div class="responsibility__cols">
+							<div class="responsibility__text"><span>Здоровье — основополагающая и естественная жизненная ценность. Мы стремимся защитить ее не только в условиях трудовой деятельности, но и в повседневной жизни, оказывая поддержку спорту — главному на сегодня социальному фактору, способному сплотить, объединить и направить в сторону здорового будущего.</span></div>
+							<div class="responsibility__text"><span>Мы верим, что вклад в спортивное развитие сегодня — это основа здоровой нации завтра.</span></div>
+						</div>
+						<div class="responsibility__cols">
+							<div>
+								<picture class="responsibility__img">
+									<source srcset="assets/images/responsibility-0.webp" type="image/webp"><img src="assets/images/responsibility-0.jpg" alt="">
+								</picture>
+								<div class="responsibility__desc">Создание футбольной команды</div>
+							</div>
+							<div>
+								<picture class="responsibility__img">
+									<source srcset="assets/images/responsibility-1.webp" type="image/webp"><img src="assets/images/responsibility-1.jpg" alt="">
+								</picture>
+								<div class="responsibility__desc">Поддержка спортсменам барнаульского клуба каратэ «Амара»</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__main"><a class="header__logo" href=""><img src="assets/images/svg/logo.svg" alt="logo"></a>
-						<div class="footer__main-col1"><a href=""><span>О компании </span></a><a href=""><span>Технологии </span></a><a href=""><span>Библиотека защиты </span></a><a href=""><span>Новости </span></a><a href=""><span>Контакты </span></a><a href=""><span>Где купить</span></a></div>
+						<div class="footer__main-col1 only-desktop"><a href=""><span>О компании</span></a><a href=""><span>Технологии</span></a><a href=""><span>Библиотека защиты</span></a><a href=""><span>Новости</span></a><a href=""><span>Контакты</span></a><a href=""><span>Где купить</span></a></div>
+						<div class="footer__main-col1 only-mobile"><a href=""><span>О компании</span></a><a href=""><span>Технологии</span></a><a href=""><span>Библиотека защиты</span></a></div>
+						<div class="footer__main-col1 only-mobile"><a href=""><span>Новости</span></a><a href=""><span>Контакты</span></a><a href=""><span>Где купить</span></a></div>
 						<div class="footer__contacts">
 							<div class="footer__contacts-col"><a class="footer__tel" href="tel:+74950330331">+7 495 033-033-1</a><a class="footer__mail" href="mailto:info@manipulas.ru">info@manipulas.ru</a>
 								<div class="footer__address">
