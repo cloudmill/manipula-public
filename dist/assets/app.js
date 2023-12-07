@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 649:
+/***/ 983:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9211,51 +9211,45 @@ function dropdown() {
     dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
   });
 }
+;// CONCATENATED MODULE: ./scripts/tabs.js
+function tabs() {
+  var panels = document.querySelectorAll('[data-tabs-panel]');
+  panels.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var activeTab = e.target.closest('[data-tab]');
+      var activePanel = e.target.closest('[data-tabs-panel]');
+      var oldActiveTab = activePanel.querySelector('[data-tab].active');
+      if (activeTab) {
+        if (oldActiveTab) {
+          oldActiveTab.classList.remove('active');
+        }
+        activeTab.classList.add('active');
+      }
+      if (activePanel.hasAttribute('data-tab-contents')) {
+        var activeId = activeTab.getAttribute('data-tab');
+        document.querySelectorAll('[data-tab-content]').forEach(function (it) {
+          return it.classList.remove('show');
+        });
+        document.querySelector("[data-tab-content=\"".concat(activeId, "\"]")).classList.add('show');
+      }
+    });
+  });
+}
 ;// CONCATENATED MODULE: ./app.js
 
 // import AOS from 'aos'
 
-// import './scripts/preloader'
+
 
 
 
 
 window.addEventListener('DOMContentLoaded', function () {
-  //   const loader = document.getElementById('loader-main')
-  //   if (loader) {
-  //     document.querySelector('body').style.overflow = 'hidden'
-  //   }
-
   swiperInit();
   fancyboxInit();
   dropdown();
+  tabs();
 });
-
-// window.addEventListener('load', () => {
-//   const loader = document.getElementById('loader-main')
-//   if (loader) {
-//     setTimeout(() => {
-//       AOS.init({
-//         once: true,
-//         offset: 0,
-//         duration: 500,
-//       })
-//       document.querySelector('body').style.overflow = ''
-//     }, 1500)
-//   } else {
-//     AOS.init({
-//       once: true,
-//       offset: 0,
-//       duration: 500,
-//     })
-//   }
-
-//   if (document.querySelector('[data-slider-id=main]')) {
-//     swiperInit()
-//   }
-
-//   chickAnimation()
-// })
 
 /***/ }),
 
@@ -25843,7 +25837,7 @@ return jQuery;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [257], () => (__webpack_require__(649)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [257], () => (__webpack_require__(983)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
