@@ -1,5 +1,371 @@
-<head>
-	<script defer="defer" src="assets/app.js"></script>
-	<link href="257.css" rel="stylesheet">
-	<link href="app.css" rel="stylesheet">
-</head>
+<!doctype html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta property="og:title" content="Манипула">
+		<title>Манипула</title>
+		<script defer="defer" src="assets/app.js"></script>
+		<link href="257.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body class="body">
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<div class="header__row">
+						<ul class="header__nav">
+							<li><a class="header__nav-item" href="">О компании</a></li>
+							<li><a class="header__nav-item" href="">Технологии</a></li>
+							<li><a class="header__nav-item" href="">Библиотека защиты</a></li>
+							<li><a class="header__nav-item" href="">Новости</a></li>
+							<li><a class="header__nav-item" href="">Контакты</a></li>
+							<li><a class="header__nav-item" href="">Где купить</a></li>
+						</ul>
+						<div class="header__contacts only-desktop"><a class="header__tel" href="tel:+74950330331">+7 495 033-033-1</a><a class="button button--small" href=""><span>Мы Вконтакте</span>
+								<div class="button__ico"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_841_13370)">
+											<path d="M11.1698 15C6.04493 15 3.1218 11.6216 3 6H5.56715C5.65147 10.1261 7.54399 11.8739 9.04305 12.2342V6H11.4604V9.55856C12.9407 9.40541 14.4958 7.78378 15.0205 6H17.4378C17.0349 8.1982 15.3484 9.81982 14.1492 10.4865C15.3484 11.027 17.2692 12.4414 18 15H15.3391C14.7676 13.2883 13.3436 11.964 11.4604 11.7838V15H11.1698Z" fill="#507E9B"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_841_13370">
+												<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)"></rect>
+											</clipPath>
+										</defs>
+									</svg></div>
+							</a><button class="button button--blue button--small" data-fancy-button="write"><span>Написать нам</span>
+								<div class="button__ico"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_841_13359)">
+											<path d="M16.6665 15.4998C17.5832 15.4998 18.3332 14.7498 18.3332 13.8332V3.83317C18.3332 2.9165 17.5832 2.1665 16.6665 2.1665H3.33317C2.4165 2.1665 1.6665 2.9165 1.6665 3.83317V18.8332L4.99984 15.4998H16.6665ZM2.49984 16.8215V3.83317C2.49984 3.37359 2.87359 2.99984 3.33317 2.99984H16.6665C17.1261 2.99984 17.4998 3.37359 17.4998 3.83317V13.8332C17.4998 14.2928 17.1261 14.6665 16.6665 14.6665H4.65484L2.49984 16.8215Z" fill="white" stroke="white" stroke-width="0.5"></path>
+											<path d="M9.99984 9.66667C10.4601 9.66667 10.8332 9.29357 10.8332 8.83333C10.8332 8.3731 10.4601 8 9.99984 8C9.5396 8 9.1665 8.3731 9.1665 8.83333C9.1665 9.29357 9.5396 9.66667 9.99984 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+											<path d="M13.3333 9.66667C13.7936 9.66667 14.1667 9.29357 14.1667 8.83333C14.1667 8.3731 13.7936 8 13.3333 8C12.8731 8 12.5 8.3731 12.5 8.83333C12.5 9.29357 12.8731 9.66667 13.3333 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+											<path d="M6.66634 9.66667C7.12658 9.66667 7.49967 9.29357 7.49967 8.83333C7.49967 8.3731 7.12658 8 6.66634 8C6.2061 8 5.83301 8.3731 5.83301 8.83333C5.83301 9.29357 6.2061 9.66667 6.66634 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_841_13359">
+												<rect width="20" height="20" fill="white" transform="translate(0 0.5)"></rect>
+											</clipPath>
+										</defs>
+									</svg></div>
+							</button></div>
+					</div>
+					<div class="header__row"><a class="header__logo" href=""><img src="assets/images/svg/logo.svg" alt="logo"></a><button class="button button--red header__catalog" data-fancy-button="catalog"><span>Каталог СИЗ рук</span>
+							<div class="button__ico"><svg class="default-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_666_9348)">
+										<path d="M16 4.80343L15.1966 4L9.9169 9.28023L4.63667 4L3.83324 4.80343L9.9169 10.8871L16 4.80343Z" fill="white"></path>
+										<path d="M16 11.6218L15.1965 10.8184L9.91687 16.0986L4.63664 10.8184L3.83321 11.6218L9.91687 17.7055L16 11.6218Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_666_9348">
+											<rect width="20" height="20" fill="white"></rect>
+										</clipPath>
+									</defs>
+								</svg><svg class="active-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								</svg></div>
+						</button><button class="button button--blue only-desktop"><span>Подобрать защитное решение</span>
+							<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_666_9358)">
+										<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+										<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_666_9358">
+											<rect width="20" height="20" fill="white"></rect>
+										</clipPath>
+									</defs>
+								</svg></div>
+						</button><label class="search only-desktop">
+							<div class="search__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M18.3333 18.3333L16.6667 16.6666" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								</svg></div>
+							<div class="search__input"><input type="search" name="search" placeholder="Введите запрос" data-search></div>
+						</label><button class="header__search only-mobile"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M18.3333 18.3333L16.6667 16.6666" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+							</svg></button><button class="header__profile only-desktop" data-fancy-button="login"><span>Личный кабинет дистрибьютора</span>
+							<div class="header__profile-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 9.99996C12.3012 9.99996 14.1667 8.13448 14.1667 5.83329C14.1667 3.53211 12.3012 1.66663 10 1.66663C7.69885 1.66663 5.83337 3.53211 5.83337 5.83329C5.83337 8.13448 7.69885 9.99996 10 9.99996Z" stroke="#507E9B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M17 18.5C17 15.275 13.95 12.5 10 12.5C6.05001 12.5 3 15.275 3 18.5" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									<path d="M7 19C7 19 7 16.5 10 16.5C13 16.5 13 19 13 19" stroke="#507E9B" stroke-width="1.5"></path>
+								</svg></div>
+						</button><button class="burger only-mobile" data-fancy-button="mobile-menu"><svg class="default-ico" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 3H15" stroke="#507E9B" stroke-width="1.5"></path>
+								<path d="M1 8H15" stroke="#507E9B" stroke-width="1.5"></path>
+								<path d="M1 13H15" stroke="#507E9B" stroke-width="1.5"></path>
+							</svg><svg class="active-ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+							</svg></button></div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="container">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+							<li class="breadcrumbs__item">
+								<div class="breadcrumbs__text"><span class="red">[</span><span>Подобрать защитное решение</span><span class="red">]</span></div>
+							</li>
+						</ul>
+					</div>
+					<h1 class="h1">Подобрать защитное решение</h1>
+					<div class="solutions-steps">
+						<div class="solutions-steps__item">
+							<div class="button filter old-active no-hover">
+								<div class="button__ico">1</div><span>Идентифицированные опасности</span>
+							</div>
+						</div>
+						<div class="solutions-steps__item">
+							<div class="button filter active no-hover">
+								<div class="button__ico">2</div><span>Вид опасности</span>
+							</div>
+						</div>
+						<div class="solutions-steps__item">
+							<div class="button filter no-hover">
+								<div class="button__ico">3</div><span>Опасные события</span>
+							</div>
+						</div>
+						<div class="solutions-steps__item">
+							<div class="button filter no-hover">
+								<div class="button__ico">4</div><span>Тип СИЗ рук, обязательных к выдаче</span>
+							</div>
+						</div>
+					</div>
+					<div class="solutions-title">
+						<div class="slider-control dark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_186_32486)">
+									<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_186_32486">
+										<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+						<h3>Механические опасности</h3>
+					</div>
+					<div class="solutions-choice">
+						<div class="solutions-choice-card"><span>Груз, инструмент или предмет, перемещаемый или поднимаемый, в том числе на высоту</span></div>
+						<div class="solutions-choice-card"><span>Вращающиеся или движущие детали оборудования или инструменты</span></div>
+						<div class="solutions-choice-card"><span>Упругий элемент применяемых материалов или оборудования, или конструкций</span></div>
+						<div class="solutions-choice-card"><span>Осколки оборудования, деталей, инструмента, стекла</span></div>
+						<div class="solutions-choice-card"><span>Неподвижная или подвижная, в том числе вращающаяся колющая поверхность (острие)</span></div>
+						<div class="solutions-choice-card"><span>Абразивные материалы, в том числе необработанная древесина (в том числе вертикальные и горизонтальные поверхности)</span></div>
+						<div class="solutions-choice-card"><span>Движущиеся режущие части механизмов, машин</span></div>
+						<div class="solutions-choice-card"><span>Острые кромки и заусенцы</span></div>
+						<div class="solutions-choice-card"><span>Дисковые ножи, дисковые пилы и другое (кроме ножей поварских)</span></div>
+						<div class="solutions-choice-card"><span>Ножи и приспособления, применяемые при обвалке мяса</span></div>
+						<div class="solutions-choice-card"><span>Ручная цепная пила</span></div>
+						<div class="solutions-choice-card"><span>Металлическая стружка с острыми кромками, возникающая при механической обработке металлических заготовок и деталей</span></div>
+						<div class="solutions-choice-card"><span>Стеклянные, фарфоровые или керамические предметы, а также пластиковые изделия острыми кромками</span></div>
+						<div class="solutions-choice-card"><span>Выполнение работ на значительной глубине в туннелях, под землей, в открытых разрезах, в том числе связанных с добычей полезных ископаемых и эксплуатацией шахт</span></div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__main"><a class="header__logo" href=""><img src="assets/images/svg/logo.svg" alt="logo"></a>
+						<div class="footer__main-col1 only-desktop"><a href=""><span>О компании</span></a><a href=""><span>Технологии</span></a><a href=""><span>Библиотека защиты</span></a><a href=""><span>Новости</span></a><a href=""><span>Контакты</span></a><a href=""><span>Где купить</span></a></div>
+						<div class="footer__main-col1 only-mobile"><a href=""><span>О компании</span></a><a href=""><span>Технологии</span></a><a href=""><span>Библиотека защиты</span></a></div>
+						<div class="footer__main-col1 only-mobile"><a href=""><span>Новости</span></a><a href=""><span>Контакты</span></a><a href=""><span>Где купить</span></a></div>
+						<div class="footer__contacts">
+							<div class="footer__contacts-col"><a class="footer__tel" href="tel:+74950330331">+7 495 033-033-1</a><a class="footer__mail" href="mailto:info@manipulas.ru">info@manipulas.ru</a>
+								<div class="footer__address">
+									<div class="footer__address-txt">121471, Москва, ул. Рябиновая, 26/2, БЦ «West Plaza»</div><button class="footer__address-btn"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.87879 3.16663L1.33333 5.50453V13.5411L5.87879 11.7876M5.87879 3.16663L10.2727 5.06617M5.87879 3.16663V11.7876M10.2727 5.06617L14.6667 3.31274V11.4954L10.2727 13.8333M10.2727 5.06617V13.8333M10.2727 13.8333L5.87879 11.7876" stroke="#6897B5" stroke-width="1.5"></path>
+										</svg><span>На карте</span></button>
+								</div>
+							</div><a class="footer__social" href><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_58_8180)">
+										<path d="M12.8038 17.3996C6.65391 17.3996 3.14616 13.3456 3 6.59961H6.08057C6.18176 11.551 8.45279 13.6483 10.2517 14.0807V6.59961H13.1525V10.8699C14.9289 10.6861 16.795 8.74015 17.4246 6.59961H20.3253C19.8419 9.23745 17.8181 11.1834 16.379 11.9834C17.8181 12.632 20.123 14.3293 21 17.3996H17.8069C17.1211 15.3456 15.4123 13.7564 13.1525 13.5401V17.3996H12.8038Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_58_8180">
+											<rect width="24" height="24" fill="white"></rect>
+										</clipPath>
+									</defs>
+								</svg></a>
+						</div>
+					</div>
+					<div class="footer__middle">
+						<div class="footer__middle-col"><img class="footer__middle-img" src="assets/images/footer-mid-0.png" alt="">
+							<div class="footer__middle-txt">Ассоциация разработчиков, изготовителей и поставщиков средств индивидуальной защиты</div>
+						</div>
+						<div class="footer__middle-col"><img class="footer__middle-img" src="assets/images/footer-mid-1.png" alt="">
+							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рук из материала DuPont™ Kevlar® на территории РФ</div>
+						</div>
+						<div class="footer__middle-col"><img class="footer__middle-img" src="assets/images/footer-mid-2.png" alt="">
+							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рукиз материала Dyneema® Diamond Technology на территории РФ</div>
+						</div>
+						<div class="footer__middle-col"><img class="footer__middle-img" src="assets/images/footer-mid-3.png" alt="">
+							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рук из материала Thermolite® на территории ЕАС</div>
+						</div>
+					</div>
+					<div class="footer__corp">
+						<div class="footer__rights">© 2008-2023 ООО «Манипула Специалист»</div><button class="footer__policy" data-fancy-button="policy">Политика конфиденциальности</button>
+						<div class="footer__author">Сделано в <a href>Клаудмил</a></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="modals">
+			<div class="mobile-menu" id="fancy-modal-mobile-menu" style="display: none">
+				<div class="mobile-menu__top"><button class="button button--blue"><span>Подобрать защитное решение</span>
+						<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_666_9358)">
+									<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+									<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_666_9358">
+										<rect width="20" height="20" fill="white"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</button><button class="button" data-fancy-button="login"><span>Личный кабинет дистрибьютора</span>
+						<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 9.99996C12.3012 9.99996 14.1667 8.13448 14.1667 5.83329C14.1667 3.53211 12.3012 1.66663 10 1.66663C7.69885 1.66663 5.83337 3.53211 5.83337 5.83329C5.83337 8.13448 7.69885 9.99996 10 9.99996Z" stroke="#507E9B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M17 18.5C17 15.275 13.95 12.5 10 12.5C6.05001 12.5 3 15.275 3 18.5" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+								<path d="M7 19C7 19 7 16.5 10 16.5C13 16.5 13 19 13 19" stroke="#507E9B" stroke-width="1.5"></path>
+							</svg></div>
+					</button></div>
+				<ul class="mobile-menu__nav">
+					<li><a href="">О компании</a></li>
+					<li><a href="">Технологии</a></li>
+					<li><a href="">Библиотека защиты</a></li>
+					<li><a href="">Новости</a></li>
+					<li><a href="">Контакты</a></li>
+					<li><a href="">Где купить</a></li>
+				</ul><a class="mobile-menu__tel" href="tel:84950330331">8 495 033-033-1</a>
+				<div class="mobile-menu__bottom"><a class="button button--small" href=""><span>Мы Вконтакте</span>
+						<div class="button__ico"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_841_13370)">
+									<path d="M11.1698 15C6.04493 15 3.1218 11.6216 3 6H5.56715C5.65147 10.1261 7.54399 11.8739 9.04305 12.2342V6H11.4604V9.55856C12.9407 9.40541 14.4958 7.78378 15.0205 6H17.4378C17.0349 8.1982 15.3484 9.81982 14.1492 10.4865C15.3484 11.027 17.2692 12.4414 18 15H15.3391C14.7676 13.2883 13.3436 11.964 11.4604 11.7838V15H11.1698Z" fill="#507E9B"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_841_13370">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</a><button class="button button--blue button--small" data-fancy-button="write"><span>Написать нам</span>
+						<div class="button__ico"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_841_13359)">
+									<path d="M16.6665 15.4998C17.5832 15.4998 18.3332 14.7498 18.3332 13.8332V3.83317C18.3332 2.9165 17.5832 2.1665 16.6665 2.1665H3.33317C2.4165 2.1665 1.6665 2.9165 1.6665 3.83317V18.8332L4.99984 15.4998H16.6665ZM2.49984 16.8215V3.83317C2.49984 3.37359 2.87359 2.99984 3.33317 2.99984H16.6665C17.1261 2.99984 17.4998 3.37359 17.4998 3.83317V13.8332C17.4998 14.2928 17.1261 14.6665 16.6665 14.6665H4.65484L2.49984 16.8215Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M9.99984 9.66667C10.4601 9.66667 10.8332 9.29357 10.8332 8.83333C10.8332 8.3731 10.4601 8 9.99984 8C9.5396 8 9.1665 8.3731 9.1665 8.83333C9.1665 9.29357 9.5396 9.66667 9.99984 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M13.3333 9.66667C13.7936 9.66667 14.1667 9.29357 14.1667 8.83333C14.1667 8.3731 13.7936 8 13.3333 8C12.8731 8 12.5 8.3731 12.5 8.83333C12.5 9.29357 12.8731 9.66667 13.3333 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+									<path d="M6.66634 9.66667C7.12658 9.66667 7.49967 9.29357 7.49967 8.83333C7.49967 8.3731 7.12658 8 6.66634 8C6.2061 8 5.83301 8.3731 5.83301 8.83333C5.83301 9.29357 6.2061 9.66667 6.66634 9.66667Z" fill="white" stroke="white" stroke-width="0.5"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_841_13359">
+										<rect width="20" height="20" fill="white" transform="translate(0 0.5)"></rect>
+									</clipPath>
+								</defs>
+							</svg></div>
+					</button></div>
+			</div>
+			<div class="catalog-modal" id="fancy-modal-catalog" style="display: none">
+				<div class="catalog-modal__inner">
+					<ul class="catalog-modal__list">
+						<li><a href="">Защита от механических воздействий</a></li>
+						<li><a href="">Защита от порезов</a></li>
+						<li><a href="">Защита от вибрации</a></li>
+						<li><a href="">Защита от ударных воздействий</a></li>
+						<li><a href="">Защита от воздействия статического электричества</a></li>
+						<li><a href="">Защита от воды и растворов нетоксичных веществ</a></li>
+					</ul>
+					<ul class="catalog-modal__list">
+						<li><a href="">Защита от химических факторов</a></li>
+						<li><a href="">Защита от пониженных температур</a></li>
+						<li><a href="">Защита от повышенных температур</a></li>
+						<li><a href="">Защита от термических рисков электрической дуги</a></li>
+						<li><a href="">Защита от воздействия электрического тока</a></li>
+					</ul><a class="catalog-modal__banner" href>
+						<div class="catalog-modal__title">Весь каталог</div>
+					</a>
+				</div>
+			</div>
+			<div class="modal success" id="fancy-modal-success" style="display: none">
+				<h2 class="success__title">Отправлено</h2>
+				<div class="success__txt">Спасибо. Мы свяжемся с вами<br>в ближайшее время.</div><button class="button button--blue success__close" data-fancybox-close><span>Закрыть</span>
+					<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_666_9358)">
+								<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+								<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+							</g>
+							<defs>
+								<clipPath id="clip0_666_9358">
+									<rect width="20" height="20" fill="white"></rect>
+								</clipPath>
+							</defs>
+						</svg></div>
+				</button>
+			</div>
+			<div class="modal" id="fancy-modal-login" style="display: none">
+				<h2 class="modal__title">Личный кабинет дистрибьютора</h2>
+				<form class="write-us-form" data-login-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Логин</span></label><label class="form-label light"><input class="form-input light" type="password" required data-input><span class="form-placeholder">Пароль</span></label><button class="button button--blue write-us-form__submit" type="submit"><span>Отправить</span></button></form>
+			</div>
+			<div class="side-modal" id="fancy-modal-policy" style="display: none">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+						<li class="breadcrumbs__item">
+							<div class="breadcrumbs__text"><span class="red">[</span><span>Политика конфиденциальности</span><span class="red">]</span></div>
+						</li>
+					</ul>
+				</div>
+				<h2 class="side-modal__title">Политика конфиденциальности</h2>
+				<div class="policy-text">
+					<p>Настоящая Политика конфиденциальности персональной информации (далее — Политика) действует в отношении всей информации, которую Сайт ( могут получить о пользователе во время использования им сайта. Согласие пользователя на предоставление персональной информации, данное им в соответствии с настоящей Политикой в рамках отношений с одним из лиц, входящих, распространяется на все лица. Использование Сайт а означает безоговорочное согласие пользователя с настоящей Политикой и указанными в ней условиями обработки его персональной информации; в случае несогласия с этими условиями пользователь должен воздержаться от использования Сервисов.</p>
+					<ol>
+						<li><span>Персональная информация пользователей, которую получает и обрабатывает Сайт</span>
+							<ul>
+								<li><span>В рамках настоящей Политики под «персональной информацией пользователя» понимаются:</span>
+									<ul>
+										<li><span>Персональная информация, которую пользователь предоставляет о себе самостоятельно заполнении форм обратной связи, включая персональные данные пользователя. Обязательная для предоставления Сервисов (оказания услуг) информация помечена специальным образом. Иная информация предоставляется пользователем на его усмотрение.</span></li>
+										<li><span>Данные, которые автоматически передаются в процессе их использования с помощью установленного на устройстве пользователя программного обеспечения, в том числе IP - адрес, инф ормация из cookie, информация о браузере пользователя (или иной программе, с помощью которой осуществляется доступ к Сервисам), время доступа, адрес запрашиваемой страницы.</span></li>
+									</ul>
+								</li>
+								<li><span>Настоящая Политика применима только к Сайт . Сайт не контролирует и не несет ответственность за сайты третьих лиц, на которые пользователь может перейти по ссылкам, доступным на сайтах Сайт, в том числе в результатах поиска. На таких сайтах у пользователя може т собираться или запрашиваться иная персональная информация, а также могут совершаться иные действия.</span></li>
+								<li><span>Сайт в общем случае не проверяет достоверность персональной информации, предоставляемой пользователями, и не осуществляет контроль за их дееспособностью. Однако Сайт исходит из того, что пользователь предоставляет достоверную и достаточную персональную информацию по вопросам, предлагаемым в форме регистрации, и поддерживает эту информацию в актуальном состоянии.</span></li>
+							</ul>
+						</li>
+						<li><span>Цели сбора и обработки персональной информации пользователей</span>
+							<ul>
+								<li><span>Сайт собирает и хранит только те персональные данные, которые необходимы для предоставления и оказания услуг (исполнения соглашений и договоров с пользователем).</span></li>
+								<li><span>Персональную информацию пользователя Сайт может использовать в следующих целях:</span>
+									<ul>
+										<li><span>Идентификация стороны в рамках соглашений и договоров с Сайт</span></li>
+										<li><span>Предоставление пользователю персонализированных услуг.</span></li>
+										<li><span>Связь с пользователем, в том числе направление уведомлений, запросов и информации, касающихся использования Сервисов, оказания услуг, а также обработка запросов и заявок от пользователя;</span></li>
+										<li><span>Улучшение качества, удобства их использования, разработка услуг;</span></li>
+										<li><span>Таргетирование рекламных материалов;</span></li>
+										<li><span>Проведение статистических и иных исследований на основе обезличенных данных.</span></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="modal" id="fancy-modal-write" style="display: none">
+				<h2 class="modal__title">Написать нам</h2>
+				<form class="write-us-form" data-write-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Имя</span></label><label class="form-label light"><input class="form-input light" type="tel" required data-input data-mask-phone><span class="form-placeholder">Телефон</span></label><label class="form-label light"><input class="form-input light" type="email" required data-input><span class="form-placeholder">E-mail</span></label><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Страна, город</span></label><label class="form-label light"><textarea class="form-input form-textarea" data-input></textarea><span class="form-placeholder">Сообщение</span></label>
+					<div class="write-us-form__bottom">
+						<div class="form-note" data-fancy-button="policy">Нажимая на кнопку «Отправить», вы даете согласие на <span class="red">Политику конфиденциальности</span></div><button class="button button--blue write-us-form__submit" type="submit"><span>Отправить</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>
