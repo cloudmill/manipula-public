@@ -24,6 +24,9 @@ forms_$(function () {
   forms_$('form').on('submit', function (e) {
     e.preventDefault();
     e.target.closest('form').reset();
+    e.target.closest('form').querySelectorAll('.form-input').forEach(function (it) {
+      return it.classList.remove('active');
+    });
     if (e.target.closest('[data-write-form]') || e.target.closest('[data-contacts-form]')) {
       _t.close();
       _t.show([{
