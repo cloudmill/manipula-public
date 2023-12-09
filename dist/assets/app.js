@@ -33,6 +33,11 @@ forms_$(function () {
         src: "#fancy-modal-success",
         type: 'inline'
       }]);
+    } else if (e.target.closest('[data-subscribe-form]')) {
+      _t.show([{
+        src: "#fancy-subscribe-success",
+        type: 'inline'
+      }]);
     }
     if (e.target.closest('[data-login-form]')) {
       _t.close();
@@ -49,7 +54,7 @@ forms_$(function () {
       alphanum: 'Введите буквенно-цифровое значение'
     },
     notblank: 'Это поле должно быть заполнено',
-    required: 'Обязательное поле',
+    required: 'Заполните поле',
     pattern: 'Это значение некорректно',
     min: 'Это значение должно быть не менее чем %s',
     max: 'Это значение должно быть не более чем %s',
@@ -70,11 +75,35 @@ forms_$(function () {
     showMaskOnHover: false
   }).mask('[data-mask-phone]');
 
+  // валидация длины телефона
+  Parsley.addValidator('phone', {
+    requirementType: 'string',
+    validateString: function validateString(value) {
+      var result = value.replaceAll(/\D/g, '');
+      return result.length === 11;
+    },
+    messages: {
+      ru: 'Заполните поле'
+    }
+  });
+
   // маска на дату
   Inputmask({
     mask: '99.99.9999 - 99.99.9999',
     showMaskOnHover: false
   }).mask('[data-mask-date]');
+
+  // валидатиция на цифры и спецсимволы
+  Parsley.addValidator('string', {
+    requirementType: 'string',
+    validateString: function validateString(value) {
+      var regexp = /[^а-яё\s]/i;
+      return !regexp.test(value);
+    },
+    messages: {
+      ru: 'Только кириллица'
+    }
+  });
   var inputs = document.querySelectorAll('[data-input]');
   if (inputs.length) {
     inputs.forEach(function (input) {
