@@ -13782,6 +13782,15 @@ window.addEventListener('DOMContentLoaded', function () {
   dropdown();
   tabs();
   tooltip();
+  var searchReset = document.querySelectorAll('[data-search-reset]');
+  if (searchReset.length) {
+    searchReset.forEach(function (it) {
+      it.addEventListener('click', function (e) {
+        var form = e.target.closest('[data-search-form]');
+        form.querySelector('[data-search]').value = '';
+      });
+    });
+  }
 });
 
 /***/ }),
