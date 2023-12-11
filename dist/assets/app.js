@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 355:
+/***/ 58:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -13699,70 +13699,43 @@ tippy.setDefaultProps({
 
 // EXTERNAL MODULE: ../node_modules/tippy.js/dist/tippy.css
 var dist_tippy = __webpack_require__(527);
-;// CONCATENATED MODULE: ./scripts/catalog-menu.js
-/* provided dependency */ var catalog_menu_$ = __webpack_require__(638);
-function catalogMenu() {
-  catalog_menu_$('[data-menu-button]').on('mouseenter', function () {
-    var id = this.getAttribute('data-menu-button');
-    if (catalog_menu_$(this).hasClass('active')) {
-      catalog_menu_$("[data-menu]").css('display', 'none');
-      catalog_menu_$(this).removeClass('active');
-      catalog_menu_$("[data-menu-sub]").css('display', 'none');
-      catalog_menu_$('[data-menu-button-sub]').removeClass('active');
-    } else {
-      catalog_menu_$("[data-menu]").css('display', 'none');
-      catalog_menu_$("[data-menu=\"".concat(id, "\"]")).toggle('slide');
-      catalog_menu_$('[data-menu-button]').removeClass('active');
-      catalog_menu_$(this).addClass('active');
-      catalog_menu_$("[data-menu-sub]").css('display', 'none');
-      catalog_menu_$('[data-menu-button-sub]').removeClass('active');
-    }
-  });
-  catalog_menu_$('[data-menu-button-sub]').on('mouseenter', function () {
-    var id = this.getAttribute('data-menu-button-sub');
-    if (catalog_menu_$(this).hasClass('active')) {
-      catalog_menu_$("[data-menu-sub]").css('display', 'none');
-      catalog_menu_$(this).removeClass('active');
-    } else {
-      catalog_menu_$("[data-menu-sub]").css('display', 'none');
-      catalog_menu_$("[data-menu-sub=\"".concat(id, "\"]")).toggle('slide');
-      catalog_menu_$('[data-menu-button-sub]').removeClass('active');
-      catalog_menu_$(this).addClass('active');
-    }
-  });
-}
 ;// CONCATENATED MODULE: ./scripts/tippy.js
-
 
 
 function tooltip() {
   var template1 = document.getElementById('solutions-search');
-  var template2 = document.getElementById('catalog-menu');
-  if (template1) {
-    tippy_esm('[data-solutions-search]', {
+  var template2 = document.getElementById('search-grop');
+  var solutionsInput = document.querySelector('[data-solutions-input]');
+  if (template1 && solutionsInput) {
+    var solutionsDrop = tippy_esm('[data-solutions-search]', {
       content: template1.innerHTML,
-      // maxWidth: 400,
       placement: 'bottom-start',
       offset: [0, 4],
       arrow: false,
       allowHTML: true,
       interactive: true,
+      // triggerTarget: solutionsInput,
       trigger: 'click'
     });
+
+    // solutionsInput.addEventListener('input', (e) => {
+    //   if (e.target.value.length > 0) {
+    //     solutionsDrop.show()
+    //   } else {
+    //     solutionsDrop.hide()
+    //   }
+    // })
   }
+
   if (template2) {
-    tippy_esm('[data-catalog-button]', {
+    tippy_esm('[data-search-form-cont]', {
       content: template2.innerHTML,
-      placement: 'bottom',
+      placement: 'bottom-start',
+      offset: [0, 7],
       arrow: false,
       allowHTML: true,
       interactive: true,
-      trigger: 'click',
-      onShow: function onShow() {
-        setTimeout(function () {
-          catalogMenu();
-        }, 100);
-      }
+      trigger: 'click'
     });
   }
 }
@@ -30379,7 +30352,7 @@ return jQuery;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [407,532], () => (__webpack_require__(355)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [407,532], () => (__webpack_require__(58)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
