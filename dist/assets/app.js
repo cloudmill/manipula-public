@@ -9072,6 +9072,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 
 function swiperInit() {
+  var _breakpoints2;
   var sliders = document.querySelectorAll('[data-slider-id]');
   if (sliders.length > 0) {
     sliders.forEach(function (slider) {
@@ -9178,12 +9179,14 @@ function swiperInit() {
   });
   new Swiper('#product-bottom-slider', {
     modules: [Navigation, Thumb],
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 8,
-    breakpoints: _defineProperty({}, 1024, {
+    breakpoints: (_breakpoints2 = {}, _defineProperty(_breakpoints2, 375, {
+      slidesPerView: 'auto'
+    }), _defineProperty(_breakpoints2, 1024, {
       slidesPerView: 4,
       spaceBetween: 20
-    }),
+    }), _breakpoints2),
     navigation: {
       prevEl: "#product-bottom-prev",
       nextEl: "#product-bottom-next"
@@ -9226,6 +9229,9 @@ function fancyboxInit() {
           });
         }
         button.classList.add('active');
+        if (id === 'filter1' || id === 'filter2') {
+          _t.close();
+        }
         // @ts-ignore
         _t.show([{
           src: "#fancy-modal-".concat(id),
@@ -9242,12 +9248,20 @@ function dropdown() {
   dropdown_$('[data-dropdown-button]').on('click', function () {
     if (Boolean(dropdown_$(this).closest('[data-dropdown-mob]').length) && mediaQuery.matches) {
       dropdown_$(this).closest('[data-dropdown]').toggleClass('active');
-      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
+      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle(100);
     } else if (!dropdown_$(this).closest('[data-dropdown-mob]').length) {
       dropdown_$(this).closest('[data-dropdown]').toggleClass('active');
-      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
+      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle(100);
     }
   });
+
+  // $('[data-dropdown-button]').on('click', function () {
+  //   $(this).closest('[data-dropdown]').toggleClass('active')
+  //   $(this)
+  //     .closest('[data-dropdown]')
+  //     .find('[data-dropdown-drop]')
+  //     .slideToggle(100)
+  // })
 }
 ;// CONCATENATED MODULE: ./scripts/tabs.js
 function tabs() {
@@ -13749,12 +13763,15 @@ function tooltip() {
 
 
 
+
 window.addEventListener('DOMContentLoaded', function () {
+  tooltip();
   swiperInit();
   fancyboxInit();
   dropdown();
   tabs();
-  tooltip();
+  // select()
+
   var searchReset = document.querySelectorAll('[data-search-reset]');
   if (searchReset.length) {
     searchReset.forEach(function (it) {
