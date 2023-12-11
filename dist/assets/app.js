@@ -9238,9 +9238,15 @@ function fancyboxInit() {
 ;// CONCATENATED MODULE: ./scripts/dropdown.js
 /* provided dependency */ var dropdown_$ = __webpack_require__(638);
 function dropdown() {
+  var mediaQuery = window.matchMedia("(max-width: 1023px)");
   dropdown_$('[data-dropdown-button]').on('click', function () {
-    dropdown_$(this).closest('[data-dropdown]').toggleClass('active');
-    dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
+    if (Boolean(dropdown_$(this).closest('[data-dropdown-mob]').length) && mediaQuery.matches) {
+      dropdown_$(this).closest('[data-dropdown]').toggleClass('active');
+      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
+    } else if (!dropdown_$(this).closest('[data-dropdown-mob]').length) {
+      dropdown_$(this).closest('[data-dropdown]').toggleClass('active');
+      dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle();
+    }
   });
 }
 ;// CONCATENATED MODULE: ./scripts/tabs.js

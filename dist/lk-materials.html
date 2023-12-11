@@ -122,30 +122,61 @@
 					<div class="lk-body">
 						<div class="lk-sidebar-container">
 							<div class="lk-sidebar">
-								<div class="lk-sidebar-block lk-sidebar-contacts">
-									<div class="lk-sidebar-block__top">
-										<div class="lk-sidebar-block__subtitle">Ваш персональный менеджер</div>
-										<div class="lk-sidebar-block__title">Игорь Давидов</div>
+								<div class="lk-sidebar-block lk-sidebar-contacts" data-dropdown data-dropdown-mob>
+									<div class="lk-sidebar-block__top" data-dropdown-button>
+										<div class="lk-sidebar-block__top-inner">
+											<div class="lk-sidebar-block__subtitle">Ваш персональный менеджер</div>
+											<div class="lk-sidebar-block__title">Игорь Давидов</div>
+										</div>
+										<div class="lk-sidebar-block__arrow only-mobile"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_301_33775)">
+													<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_301_33775">
+														<rect width="20" height="20" fill="white"></rect>
+													</clipPath>
+												</defs>
+											</svg></div>
 									</div>
-									<ul class="list-red-dot">
-										<li><a href="tel:+79811579290">+7 981 157 9290</a></li>
-										<li><a href="mailto:id@manipulas.ru">id@manipulas.ru</a></li>
-									</ul>
-								</div>
-								<div class="lk-sidebar-block">
-									<nav class="lk-sidebar-nav">
-										<ul>
-											<li><a href="">Программа лояльности</a></li>
-											<li><a href="">Профиль</a></li>
-											<li><a href="">Дистрибьюторское соглашение</a></li>
-											<li><a href="">Программа маркетинговой поддержки</a></li>
-											<li class="active">POS-материалы</li>
+									<div class="lk-sidebar-contacts__drop" data-dropdown-drop>
+										<ul class="list-red-dot">
+											<li><a href="tel:+79811579290">+7 981 157 9290</a></li>
+											<li><a href="mailto:id@manipulas.ru">id@manipulas.ru</a></li>
 										</ul>
-									</nav><button class="lk-exit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6.56006 14.6802L4.00006 12.1202L6.56006 9.56018" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square"></path>
-											<path d="M14.24 12.1201L5.06999 12.1201" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
-											<path d="M11 20L20 20L20 4L11 4" stroke="white" stroke-width="1.5"></path>
-										</svg><span>Выйти</span></button>
+									</div>
+								</div>
+								<div class="lk-sidebar-block" data-dropdown data-dropdown-mob>
+									<div class="lk-sidebar-block__top2 only-mobile" data-dropdown-button>
+										<div class="lk-sidebar-block__top2-inner">
+											<div>POS-материалы</div>
+										</div>
+										<div class="lk-sidebar-block__arrow only-mobile"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_301_33775)">
+													<path d="M16 7.80343L15.1966 7L9.9169 12.2802L4.63667 7L3.83324 7.80343L9.9169 13.8871L16 7.80343Z" fill="white"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_301_33775">
+														<rect width="20" height="20" fill="white"></rect>
+													</clipPath>
+												</defs>
+											</svg></div>
+									</div>
+									<div class="lk-sidebar-contacts__drop2" data-dropdown-drop>
+										<nav class="lk-sidebar-nav">
+											<ul>
+												<li><a href="">Программа лояльности</a></li>
+												<li><a href="">Профиль</a></li>
+												<li><a href="">Дистрибьюторское соглашение</a></li>
+												<li><a href="">Программа маркетинговой поддержки</a></li>
+												<li class="active">POS-материалы</li>
+											</ul>
+										</nav><button class="lk-exit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.56006 14.6802L4.00006 12.1202L6.56006 9.56018" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square"></path>
+												<path d="M14.24 12.1201L5.06999 12.1201" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+												<path d="M11 20L20 20L20 4L11 4" stroke="white" stroke-width="1.5"></path>
+											</svg><span>Выйти</span></button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -334,7 +365,7 @@
 			</div>
 			<div class="modal center-modal" id="fancy-modal-login" style="display: none">
 				<h2 class="modal__title">Личный кабинет дистрибьютора</h2>
-				<form class="write-us-form" data-login-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Логин</span></label><label class="form-label light"><input class="form-input light" type="password" required data-input><span class="form-placeholder">Пароль</span></label><button class="button button--blue write-us-form__submit" type="submit"><span>Войти</span></button></form>
+				<form class="write-us-form" data-login-form><label class="form-label light"><input class="form-input light" required data-input><span class="form-placeholder">Логин</span></label><label class="form-label light"><input class="form-input light" type="password" required data-input data-parsley-minlength="6" data-parsley-maxlength="20"><span class="form-placeholder">Пароль</span></label><button class="button button--blue write-us-form__submit" type="submit"><span>Войти</span></button></form>
 			</div>
 			<div class="side-modal" id="fancy-modal-policy" style="display: none">
 				<div class="breadcrumbs">
