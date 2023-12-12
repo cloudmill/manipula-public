@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 558:
+/***/ 732:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -389,87 +389,309 @@ function tooltip() {
     });
   }
 }
-;// CONCATENATED MODULE: ./scripts/maps.js
-var siteTemplPath = document.querySelector('[data-type=site-templ-path]');
-function initMap() {
-  ymaps.ready(function () {
-    if (document.querySelector('#contacts-map')) {
-      try {
-        var map = new ymaps.Map('contacts-map', {
-          center: [55.695393, 37.421967],
-          zoom: 11,
-          controls: ['smallMapDefaultSet']
+;// CONCATENATED MODULE: ./scripts/contacts-map.js
+function initContactsMap() {
+  if (document.querySelector('#contacts-map')) {
+    ymaps.ready(function () {
+      if (document.querySelector('#contacts-map')) {
+        try {
+          var map = new ymaps.Map('contacts-map', {
+            center: [55.695393, 37.421967],
+            zoom: 11,
+            controls: ['smallMapDefaultSet']
+          }, {
+            maxZoom: 22
+          });
+          var coords1 = [55.695393, 37.421967];
+          var coords2 = [55.681945, 37.424345];
+          var markSize = 40;
+          var placemark1 = new ymaps.Placemark(coords1, {}, {
+            iconLayout: 'default#image',
+            // iconImageHref: `${window.CONFIG.path}assets/images/svg/office-placemark.svg`,
+            iconImageHref: "assets/images/svg/placemark-blue.svg",
+            iconImageSize: [markSize, markSize],
+            iconImageOffset: [-markSize / 2, -markSize / 2],
+            balloonPanelMaxMapArea: 0,
+            hideIconOnBalloonOpen: false
+          });
+          var placemark2 = new ymaps.Placemark(coords2, {}, {
+            iconLayout: 'default#image',
+            // iconImageHref: `${window.CONFIG.path}assets/images/svg/office-placemark.svg`,
+            iconImageHref: "assets/images/svg/placemark-dark.svg",
+            iconImageSize: [markSize, markSize],
+            iconImageOffset: [-markSize / 2, -markSize / 2],
+            balloonPanelMaxMapArea: 0,
+            hideIconOnBalloonOpen: false
+          });
+          map.geoObjects.add(placemark1);
+          map.geoObjects.add(placemark2);
+          map.YMap = map;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    });
+  }
+}
+;// CONCATENATED MODULE: ./scripts/where-buy-map.js
+/* provided dependency */ var where_buy_map_$ = __webpack_require__(638);
+// import { defaults } from './fancybox'
+// map
+// const BREAKPOINT = 1280;
+var BREAKPOINT = 1024;
+var mediaQuery = window.matchMedia("(min-width: ".concat(BREAKPOINT, "px)"));
+function initPlacemarks(map, isClearCurrent) {
+  // vars
+  var markWidth = 32;
+  var markHeight = 32;
+  if (isClearCurrent) {
+    map.geoObjects.removeAll();
+  }
+  var customItemContentLayout = ymaps.templateLayoutFactory.createClass('<div class="balloon__content balloon__content_cluster">' + '$[properties.balloon]' + '</div>');
+  var clusterer = new ymaps.Clusterer({
+    clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="cluster">{{ properties.geoObjects.length }}</div>'),
+    clusterBalloonItemContentLayout: customItemContentLayout,
+    clusterBalloonContentLayout: 'cluster#balloonCarousel',
+    hideIconOnBalloonOpen: false,
+    clusterIconShape: {
+      type: 'Rectangle',
+      coordinates: [[0, 0], [50, 50]]
+    }
+  });
+  clusterer.events.add(['balloonopen'], function (e) {
+    var _clusterer$getCluster;
+    var geoObjects = (_clusterer$getCluster = clusterer.getClusters()[0]) === null || _clusterer$getCluster === void 0 ? void 0 : _clusterer$getCluster.getGeoObjects();
+    geoObjects === null || geoObjects === void 0 ? void 0 : geoObjects.forEach(function (geoObject) {
+      var data = geoObject.properties._data;
+      var div = document.createElement('div');
+      div.innerHTML = data.balloon;
+      var name = div.querySelector('.buy-page__title').textContent;
+      var placemarks = document.querySelectorAll('[data-placemark]');
+      placemarks.forEach(function (item) {
+        var title = item.querySelector('.buy-page__title');
+        if (title.textContent === name) {
+          item.classList.add('active');
+        }
+      });
+    });
+  });
+  clusterer.events.add(['balloonclose'], function (e) {
+    var placemarks = document.querySelectorAll('[data-placemark].active');
+    placemarks.forEach(function (item) {
+      item.classList.remove('active');
+    });
+  });
+
+  // balloon layout
+  var layout = ymaps.templateLayoutFactory.createClass(['<div class="balloon">', '<div class="balloon__content">', '$[properties.balloon]', '</div>', '<div class="balloon__close"></div>', '<div class="balloon__arrow"></div>', '</div>'].join(''), {
+    build: function build() {
+      this.constructor.superclass.build.call(this);
+      this._$element = where_buy_map_$('.balloon', this.getParentElement());
+      var close = this._$element.find('.balloon__close');
+      close.bind('click', this.onCloseClick);
+      this.applyElementOffset();
+    },
+    onSublayoutSizeChange: function onSublayoutSizeChange() {
+      layout.superclass.onSublayoutSizeChange.apply(this, arguments);
+      if (!this._isElement(this._$element)) {
+        return;
+      }
+      this.applyElementOffset();
+      this.events.fire('shapechange');
+    },
+    applyElementOffset: function applyElementOffset() {
+      this._$element.css({
+        left: -(this._$element[0].offsetWidth / 2),
+        top: -(this._$element[0].offsetHeight + markHeight + 4)
+      });
+    },
+    getShape: function getShape() {
+      if (!this._isElement(this._$element)) {
+        return layout.superclass.getShape.call(this);
+      }
+      var position = this._$element.position();
+      return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([[position.left, position.top], [position.left + this._$element[0].offsetWidth, position.top + this._$element[0].offsetHeight]]));
+    },
+    onCloseClick: function onCloseClick() {
+      map.balloon.close();
+    },
+    _isElement: function _isElement(element) {
+      return element && element[0];
+    }
+  });
+
+  // добавление точек
+  var placemarks = [];
+  var requests = [];
+  var placemarksParent = where_buy_map_$('[data-placemarks]');
+  var placemarksNodes = where_buy_map_$('[data-placemark]');
+  where_buy_map_$('[data-placemark]').each(function () {
+    requests.push(ymaps.geocode(where_buy_map_$(this).data('placemark').trim()));
+  });
+  Promise.all(requests).then(function (res) {
+    res.forEach(function (item, i) {
+      // данные
+      var balloon = placemarksNodes.eq(i).html();
+      var storeType = placemarksNodes.eq(i).data('store-type');
+
+      // экспозиция
+      var expositions = placemarksNodes.eq(i).data('placemark-exposition');
+      if (expositions) {
+        var expositionHtml = createExposition(expositions);
+        balloon += expositionHtml;
+      }
+
+      // placemark
+      // const coordinates = $(this).data('placemark').split(' ');
+      var coordinates = item.geoObjects.get(0).geometry.getCoordinates();
+      var placemark = new ymaps.Placemark(coordinates, {
+        balloon: balloon
+      }, {
+        iconLayout: 'default#image',
+        // iconImageHref: `${window.CONFIG.path}/assets/images/svg/placemark-${storeType}.svg`,
+        iconImageHref: "assets/images/svg/placemark-".concat(storeType, ".svg"),
+        iconImageSize: [markWidth, markHeight],
+        iconImageOffset: [-markWidth / 2, -markHeight / 2],
+        balloonLayout: layout,
+        balloonPanelMaxMapArea: 0,
+        hideIconOnBalloonOpen: false
+      });
+
+      // events
+      // placemark.events.add(['click'], () => {
+      //   if (mediaQuery.matches) {
+      //     const offsetTop = placemarksNodes.eq(i)[0].offsetTop
+
+      //     placemarksParent.scrollTop(offsetTop + 1)
+      //   } else {
+      //     const modal = document.querySelector('[data-placemark-modal]')
+      //     const container = modal.querySelector('[data-placemark-container]')
+
+      //     container.innerHTML = balloon
+      //     const options = {
+      //       ...defaults,
+      //       animationEffect: 'right',
+      //     }
+      //     $.fancybox.defaults = { ...$.fancybox.defaults, ...options }
+      //     $.fancybox.open($(modal))
+      //   }
+      // })
+
+      placemark.events.add(['balloonopen'], function () {
+        placemarksNodes.eq(i).addClass('active');
+      });
+      placemark.events.add(['balloonclose'], function () {
+        placemarksNodes.eq(i).removeClass('active');
+      });
+      if (mediaQuery.matches) {
+        placemarksNodes.eq(i).on('click', function () {
+          var parent = placemark.getParent();
+          if (!parent) {
+            map.setCenter(coordinates, 16);
+          }
+          try {
+            placemark.balloon.open();
+          } catch (e) {
+            var cluster = findCluster(placemark, clusterer);
+            clusterer.balloon.open(cluster);
+          }
+        });
+      }
+      placemarks.push(placemark);
+    });
+    // console.log(clusterer)
+    clusterer.add(placemarks);
+    map.geoObjects.add(clusterer);
+
+    // позиционирование на точках
+    map.setBounds(clusterer.getBounds(), {
+      zoomMargin: Math.max(markWidth, markHeight)
+    }).then(function () {
+      if (placemarks.length === 1) {
+        map.setZoom(15);
+      }
+    });
+  });
+}
+function findCluster(placemark, clusterer) {
+  var clusters = clusterer.getClusters();
+  var result;
+  for (var i = 0; i < clusters.length; i++) {
+    var objects = clusters[i].getGeoObjects();
+    for (var j = 0; j < objects.length; j++) {
+      if (objects[j] === placemark) {
+        result = clusters[i];
+        break;
+      }
+    }
+  }
+  return result;
+}
+
+// function createExposition(items) {
+//   const parent = $(document.createElement('div'))
+//   let expositionItmes = []
+
+//   items.forEach((item) => {
+//     const str = `<a href="${item.link}" target="_blank" class="buy-page__exposition-item">${item.name}</a>`
+//     expositionItmes.push(str)
+//   })
+
+//   const container = [
+//     '<div class="buy-page__exposition">',
+//     '<div class="buy-page__exposition-container">',
+//     '<div class="buy-page__exposition-title">',
+//     'Экспозиция',
+//     '</div>',
+//     '<div class="buy-page__exposition-list">',
+//     `${expositionItmes.join('')}`,
+//     '</div>',
+//     '</div>',
+//     '</div>',
+//   ].join('')
+
+//   parent.html(container)
+
+//   return parent.html()
+// }
+
+function initBuyMap() {
+  if (where_buy_map_$('#where-buy-map').length) {
+    try {
+      ymaps.ready(function () {
+        var center = where_buy_map_$('#where-buy-map').data('map-center').split(' ');
+        var zoom = Number(where_buy_map_$('#where-buy-map').data('map-zoom'));
+
+        // init
+        var map = new ymaps.Map('where-buy-map', {
+          center: center ? center : [58.050234, 53.099332],
+          zoom: zoom ? zoom : 5,
+          controls: []
         }, {
           maxZoom: 22
         });
-        var coords1 = [55.695393, 37.421967];
-        var coords2 = [55.681945, 37.424345];
-        var markSize = 40;
-        var placemark1 = new ymaps.Placemark(coords1, {}, {
-          iconLayout: 'default#image',
-          // iconImageHref: `${window.CONFIG.path}assets/images/svg/office-placemark.svg`,
-          iconImageHref: "assets/images/svg/placemark-blue.svg",
-          iconImageSize: [markSize, markSize],
-          iconImageOffset: [-markSize / 2, -markSize / 2],
-          balloonPanelMaxMapArea: 0,
-          hideIconOnBalloonOpen: false
+        if (!mediaQuery.matches) {
+          map.behaviors.disable('drag');
+        }
+        initPlacemarks(map);
+
+        // balloon close
+        map.events.add('click', function () {
+          if (map.balloon.isOpen()) {
+            map.balloon.close();
+          }
         });
-        var placemark2 = new ymaps.Placemark(coords2, {}, {
-          iconLayout: 'default#image',
-          // iconImageHref: `${window.CONFIG.path}assets/images/svg/office-placemark.svg`,
-          iconImageHref: "assets/images/svg/placemark-dark.svg",
-          iconImageSize: [markSize, markSize],
-          iconImageOffset: [-markSize / 2, -markSize / 2],
-          balloonPanelMaxMapArea: 0,
-          hideIconOnBalloonOpen: false
-        });
-        map.geoObjects.add(placemark1);
-        map.geoObjects.add(placemark2);
-        map.YMap = map;
-      } catch (err) {
-        console.error(err);
-      }
+        where_buy_map_$('#where-buy-map')[0].YMap = map;
+      });
+    } catch (err) {
+      console.error(err);
     }
-
-    // if (document.querySelector('#map2')) {
-    //   try {
-    //     ymaps.ready(function () {
-    //       var myMap = new ymaps.Map(
-    //           'map2',
-    //           {
-    //             center: [59.934277, 30.309636],
-    //             zoom: 14,
-    //           },
-    //           {
-    //             searchControlProvider: 'yandex#search',
-    //           }
-    //         ),
-    //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    //           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    //         ),
-    //         myPlacemark = new ymaps.Placemark(
-    //           [59.934277, 30.309636],
-    //           {},
-    //           {
-    //             iconLayout: 'default#image',
-    //             // iconImageHref: '/local/templates/main/assets/images/placemark.svg',
-    //             iconImageHref: window.config.path + 'assets/images/placemark.svg',
-    //             iconImageSize: [45.71, 64],
-    //             iconImageOffset: [-22, -64],
-    //           }
-    //         )
-
-    //       myMap.geoObjects.add(myPlacemark)
-    //     })
-    //   } catch (err) {
-    //     console.error(err)
-    //   }
-    // }
-  });
+  }
 }
 ;// CONCATENATED MODULE: ./app.js
 
 // import AOS from 'aos'
+
 
 
 
@@ -486,7 +708,8 @@ window.addEventListener('DOMContentLoaded', function () {
   dropdown();
   tabs();
   // select()
-  initMap();
+  initContactsMap();
+  initBuyMap();
   var searchReset = document.querySelectorAll('[data-search-reset]');
   if (searchReset.length) {
     searchReset.forEach(function (it) {
@@ -649,7 +872,7 @@ window.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [174], () => (__webpack_require__(558)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [174], () => (__webpack_require__(732)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
