@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 		<meta property="og:title" content="Манипула">
 		<title>Манипула</title>
-		<script defer="defer" src="assets/styles.js"></script>
+		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="407.css" rel="stylesheet">
+		<link href="174.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -176,7 +176,7 @@
 						</ul>
 					</div>
 					<div class="contacts-top">
-						<h1 class="h1">Контакты</h1><a class="button button--small fit-content" href=""><span>Мы Вконтакте</span>
+						<h1 class="h1">Контакты</h1><a class="button contacts-link fit-content" href=""><span>Мы Вконтакте</span>
 							<div class="button__ico"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_841_13370)">
 										<path d="M11.1698 15C6.04493 15 3.1218 11.6216 3 6H5.56715C5.65147 10.1261 7.54399 11.8739 9.04305 12.2342V6H11.4604V9.55856C12.9407 9.40541 14.4958 7.78378 15.0205 6H17.4378C17.0349 8.1982 15.3484 9.81982 14.1492 10.4865C15.3484 11.027 17.2692 12.4414 18 15H15.3391C14.7676 13.2883 13.3436 11.964 11.4604 11.7838V15H11.1698Z" fill="#507E9B"></path>
@@ -198,7 +198,7 @@
 								<li><a href="mailto:info@manipulas.ru">info@manipulas.ru</a></li>
 							</ul>
 						</div>
-						<div id="map" style="position: relative; overflow: hidden"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&amp;utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 0px">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.302539%2C59.942265&amp;utm_medium=mapframe&amp;utm_source=maps&amp;z=13.78" style="color: #eee; font-size: 12px; position: absolute; top: 14px">Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.302539%2C59.942265&amp;z=13.78" frameborder="1" allowfullscreen style="position: relative"></iframe></div>
+						<div id="contacts-map"></div>
 						<div class="contacts-map-info dark-blue">
 							<div class="contacts-map-info__title">Склад</div>
 							<div class="contacts-map-info__text">121471, Москва, ул. Рябиновая, 38Д</div>
@@ -251,7 +251,7 @@
 					</div>
 					<div class="contacts-bottom">
 						<h2 class="h2">Связаться с нами</h2>
-						<form class="contacts-form" data-contacts-form><label class="form-label"><input class="form-input" required data-input><span class="form-placeholder">ФИО</span></label><label class="form-label"><input class="form-input" type="tel" required data-input data-mask-phone data-parsley-phone><span class="form-placeholder">Телефон</span></label><label class="form-label"><input class="form-input" type="email" required data-input><span class="form-placeholder">E-mail</span></label><label class="form-label"><input class="form-input" required data-input><span class="form-placeholder">Страна, город</span></label><label class="form-label"><textarea class="form-input form-textarea" data-input></textarea><span class="form-placeholder">Сообщение</span></label>
+						<form class="contacts-form" data-contacts-form><label class="form-label"><input class="form-input" required data-input data-parsley-string><span class="form-placeholder">ФИО</span></label><label class="form-label"><input class="form-input" type="tel" required data-input data-mask-phone data-parsley-phone><span class="form-placeholder">Телефон</span></label><label class="form-label"><input class="form-input" type="email" required data-input><span class="form-placeholder">E-mail</span></label><label class="form-label"><input class="form-input" required data-input data-parsley-string><span class="form-placeholder">Страна, город</span></label><label class="form-label"><textarea class="form-input form-textarea" data-input></textarea><span class="form-placeholder t-area">Сообщение</span></label>
 							<div class="contacts-form__bottom">
 								<div class="form-note" data-fancy-button="policy">Нажимая на кнопку «Отправить», вы даете согласие на <span class="red">Политику конфиденциальности</span></div><button class="button button--blue contacts-form__submit" type="submit"><span>Отправить</span>
 									<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -478,6 +478,7 @@
 				</form>
 			</div>
 		</div>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=682f216b-3af8-4745-a945-d681997988c6&amp;lang=ru_RU"></script>
 	</body>
 
 </html>
