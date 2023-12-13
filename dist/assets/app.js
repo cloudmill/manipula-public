@@ -368,12 +368,16 @@ function tabs() {
 var tippy_esm = __webpack_require__(145);
 // EXTERNAL MODULE: ../node_modules/tippy.js/dist/tippy.css
 var tippy = __webpack_require__(527);
+// EXTERNAL MODULE: ../node_modules/tippy.js/themes/light.css
+var light = __webpack_require__(686);
 ;// CONCATENATED MODULE: ./scripts/tippy.js
+
 
 
 function tooltip() {
   var template1 = document.getElementById('solutions-search');
   var template2 = document.getElementById('search-grop');
+  var prodTootip = document.querySelector('[data-tippy-content]');
   var solutionsInput = document.querySelector('[data-solutions-input]');
   if (template1 && solutionsInput) {
     var solutionsDrop = (0,tippy_esm/* default */.ZP)('[data-solutions-search]', {
@@ -405,6 +409,13 @@ function tooltip() {
       allowHTML: true,
       interactive: true,
       trigger: 'click'
+    });
+  }
+  if (prodTootip) {
+    (0,tippy_esm/* default */.ZP)('[data-tippy-content]', {
+      theme: 'light',
+      trigger: 'click',
+      interactive: true
     });
   }
 }
@@ -891,7 +902,7 @@ window.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [174], () => (__webpack_require__(732)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [883], () => (__webpack_require__(732)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
