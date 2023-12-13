@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 732:
+/***/ 942:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -331,14 +331,6 @@ function dropdown() {
       dropdown_$(this).closest('[data-dropdown]').find('[data-dropdown-drop]').slideToggle(100);
     }
   });
-
-  // $('[data-dropdown-button]').on('click', function () {
-  //   $(this).closest('[data-dropdown]').toggleClass('active')
-  //   $(this)
-  //     .closest('[data-dropdown]')
-  //     .find('[data-dropdown-drop]')
-  //     .slideToggle(100)
-  // })
 }
 ;// CONCATENATED MODULE: ./scripts/tabs.js
 function tabs() {
@@ -417,6 +409,50 @@ function tooltip() {
       trigger: 'click',
       interactive: true
     });
+  }
+}
+;// CONCATENATED MODULE: ./scripts/select.js
+/* provided dependency */ var select_$ = __webpack_require__(638);
+function select_select() {
+  var selects = select_$('[data-select]');
+  if (selects.length) {
+    // при клике в любом месте страницы
+    // закрываются открытые селекты
+    select_$(window).on('click', function () {
+      select_$('[data-select-drop]').slideUp(100);
+      select_$('[data-select]').removeClass('active');
+    });
+
+    // если был клик по селекту - он открывается
+    select_$('[data-select-button]').on('click', function () {
+      var select = select_$(this).closest('[data-select]');
+
+      // таймаут, потому что клик по окну
+      // всплывает дольше
+      setTimeout(function () {
+        select.toggleClass('active');
+        select.find('[data-select-drop]').slideToggle(100);
+      });
+    });
+
+    // выбор опции в селекте
+    select_$('[data-select-option]').on('click', function () {
+      var select = select_$(this).closest('[data-select]');
+      select.find('[data-select-active]').text(select_$(this).text());
+      select.find('[data-select-drop]').slideUp(100);
+      select.removeClass('active');
+    });
+
+    // сброс фильтров в каталоге
+    var reset = document.querySelector('[data-filter-reset-desktop]');
+    if (reset) {
+      reset.addEventListener('click', function () {
+        var titles = document.querySelectorAll('[data-select-active]');
+        titles.forEach(function (title) {
+          title.innerText = title.closest('[data-select-title]').getAttribute('data-select-title');
+        });
+      });
+    }
   }
 }
 ;// CONCATENATED MODULE: ./scripts/contacts-map.js
@@ -737,7 +773,7 @@ window.addEventListener('DOMContentLoaded', function () {
   fancyboxInit();
   dropdown();
   tabs();
-  // select()
+  select_select();
   initContactsMap();
   initBuyMap();
   var searchReset = document.querySelectorAll('[data-search-reset]');
@@ -902,7 +938,7 @@ window.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [883], () => (__webpack_require__(732)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [883], () => (__webpack_require__(942)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
