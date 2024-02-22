@@ -381,7 +381,7 @@
 					<section class="news">
 						<div class="news-top" data-aos="fade-up">
 							<h2 class="h2">Последние новости</h2>
-							<div class="controls only-desktop"><button class="slider-control dark" data-prev="news"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div class="controls only-desktop"><button class="slider-control dark" id="news-prev"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_186_32486)">
 											<path d="M12.1966 3.91687L13 4.7203L7.71977 9.99997L13 15.2802L12.1966 16.0836L6.11291 9.99997L12.1966 3.91687Z" fill="#222B33"></path>
 										</g>
@@ -390,7 +390,7 @@
 												<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
 											</clipPath>
 										</defs>
-									</svg></button><button class="slider-control dark" data-next="news"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									</svg></button><button class="slider-control dark" id="news-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_186_32492)">
 											<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
 										</g>
@@ -402,181 +402,95 @@
 									</svg></button></div>
 						</div>
 						<div class="news-slider" data-aos="fade-up">
-							<div class="swiper only-desktop" data-slider-id="news">
+							<div class="swiper only-desktop" id="news-main">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide news-slide">
-										<div class="news-list">
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
+											<div class="news-item__title">SLIDE 0</div>
 										</div>
 									</div>
-									<div class="swiper-slide news-slide">
-										<div class="news-list">
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
+											<div class="news-item__title">SLIDE 1</div>
 										</div>
 									</div>
-									<div class="swiper-slide news-slide">
-										<div class="news-list">
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
+											<div class="news-item__title">SLIDE 2</div>
 										</div>
 									</div>
-									<div class="swiper-slide news-slide">
-										<div class="news-list">
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
-											</div>
+											<div class="news-item__title">SLIDE 3</div>
 										</div>
 									</div>
-									<div class="swiper-slide news-slide">
-										<div class="news-list">
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 4</div>
+										</div>
+									</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
-												<picture class="news-item__img">
-													<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
-												</picture>
-												<div class="news-item__info">
-													<div class="news-item__date">6 марта 2023</div>
-													<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
-												</div>
-												<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 5</div>
+										</div>
+									</div>
+									<div class="swiper-slide big-news">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
+											<div class="news-item__title">SLIDE 6</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="swiper only-mobile" data-slider-id="news-mob">
+							<div class="swiper" id="news">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide news-slide">
 										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
@@ -587,7 +501,7 @@
 												<div class="news-item__date">6 марта 2023</div>
 												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 0</div>
 										</div>
 									</div>
 									<div class="swiper-slide news-slide">
@@ -599,7 +513,7 @@
 												<div class="news-item__date">6 марта 2023</div>
 												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 1</div>
 										</div>
 									</div>
 									<div class="swiper-slide news-slide">
@@ -611,7 +525,7 @@
 												<div class="news-item__date">6 марта 2023</div>
 												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 2</div>
 										</div>
 									</div>
 									<div class="swiper-slide news-slide">
@@ -623,7 +537,7 @@
 												<div class="news-item__date">6 марта 2023</div>
 												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 3</div>
 										</div>
 									</div>
 									<div class="swiper-slide news-slide">
@@ -635,7 +549,31 @@
 												<div class="news-item__date">6 марта 2023</div>
 												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
 											</div>
-											<div class="news-item__title">Выставка KIOSH-2023 в Казахстане 24-26 мая</div>
+											<div class="news-item__title">SLIDE 4</div>
+										</div>
+									</div>
+									<div class="swiper-slide news-slide">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
+											</div>
+											<div class="news-item__title">SLIDE 5</div>
+										</div>
+									</div>
+									<div class="swiper-slide news-slide">
+										<div class="news-item" data-fancy-button="news" data-aos="fade-up" data-client>
+											<picture class="news-item__img">
+												<source srcset="assets/images/news-0.webp" type="image/webp"><img src="assets/images/news-0.jpg" alt="">
+											</picture>
+											<div class="news-item__info">
+												<div class="news-item__date">6 марта 2023</div>
+												<div class="news-item__tag"><span class="red">[</span>&nbsp;<span>Новости компании</span>&nbsp;<span class="red">]</span></div>
+											</div>
+											<div class="news-item__title">SLIDE 6</div>
 										</div>
 									</div>
 								</div>
