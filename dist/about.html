@@ -5,6 +5,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="format-detection" content="telephone=no" />
 		<meta name="format-detection" content="address=no" />
 		<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -85,18 +87,74 @@
 										</clipPath>
 									</defs>
 								</svg></div>
-						</a><label class="search only-desktop" data-search-form data-search-form-cont>
-							<div class="search__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-									<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-									<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-									<path d="M18.3333 18.3333L16.6667 16.6666" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-								</svg></div>
-							<div class="search__input"><input type="search" name="search" placeholder="Введите запрос" autocomplete="off" data-search></div><button class="search__reset" data-search-reset><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-									<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-								</svg></button>
-						</label><button class="header__search search-mob only-mobile" data-client data-fancy-button="mob-search"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						</a>
+						<div class="search-wrapper"><label class="search only-desktop" data-search-form data-search-form-cont>
+								<div class="search__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M18.3333 18.3333L16.6667 16.6666" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									</svg></div>
+								<div class="search__input"><input type="search" name="search" placeholder="Введите запрос" autocomplete="off" data-search data-search-input="search-desktop"></div><button class="search__reset" data-search-reset><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+										<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+									</svg></button>
+							</label>
+							<div id="search-grop" data-search-modal="search-desktop">
+								<div class="search-drop">
+									<div class="search-drop-list"><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+											<div>
+												<div class="search-drop-card__labels">
+													<div class="card-label red">NEW</div>
+													<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+												</div>
+												<div class="search-drop-card__tag">Перчатки</div>
+												<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+											</div>
+										</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+											<div>
+												<div class="search-drop-card__labels">
+													<div class="card-label red">NEW</div>
+													<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+												</div>
+												<div class="search-drop-card__tag">Перчатки</div>
+												<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+											</div>
+										</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+											<div>
+												<div class="search-drop-card__labels">
+													<div class="card-label red">NEW</div>
+													<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+												</div>
+												<div class="search-drop-card__tag">Перчатки</div>
+												<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+											</div>
+										</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+											<div>
+												<div class="search-drop-card__labels">
+													<div class="card-label red">NEW</div>
+													<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+												</div>
+												<div class="search-drop-card__tag">Перчатки</div>
+												<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+											</div>
+										</a></div>
+									<div class="search-drop__bottom"><a class="button button--blue" href><span>Смотреть все результаты (78)</span>
+											<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_666_9358)">
+														<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+														<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath id="clip0_666_9358">
+															<rect width="20" height="20" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg></div>
+										</a></div>
+								</div>
+							</div>
+						</div><button class="header__search search-mob only-mobile" data-client data-fancy-button="mob-search"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 								<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 								<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
@@ -114,62 +172,10 @@
 							</svg><svg class="active-ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 								<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-							</svg></button></div>
-				</div>
-				<div id="search-grop">
-					<div class="search-drop">
-						<div class="search-drop-list"><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
-								<div>
-									<div class="search-drop-card__labels">
-										<div class="card-label red">NEW</div>
-										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
-									</div>
-									<div class="search-drop-card__tag">Перчатки</div>
-									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
-								</div>
-							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
-								<div>
-									<div class="search-drop-card__labels">
-										<div class="card-label red">NEW</div>
-										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
-									</div>
-									<div class="search-drop-card__tag">Перчатки</div>
-									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
-								</div>
-							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
-								<div>
-									<div class="search-drop-card__labels">
-										<div class="card-label red">NEW</div>
-										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
-									</div>
-									<div class="search-drop-card__tag">Перчатки</div>
-									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
-								</div>
-							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
-								<div>
-									<div class="search-drop-card__labels">
-										<div class="card-label red">NEW</div>
-										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
-									</div>
-									<div class="search-drop-card__tag">Перчатки</div>
-									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
-								</div>
-							</a></div>
-						<div class="search-drop__bottom"><a class="button button--blue" href><span>Смотреть все результаты (78)</span>
-								<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_666_9358)">
-											<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
-											<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
-										</g>
-										<defs>
-											<clipPath id="clip0_666_9358">
-												<rect width="20" height="20" fill="white"></rect>
-											</clipPath>
-										</defs>
-									</svg></div>
-							</a></div>
+							</svg></button>
 					</div>
 				</div>
+				<div class="header__overlay"></div>
 			</header>
 			<main class="main">
 				<div class="container">
@@ -911,15 +917,20 @@
 								</svg></a>
 						</div>
 					</div>
-					<div class="footer__middle" data-aos="fade-up"><a class="footer__middle-col" href><img class="footer__middle-img" src="assets/images/footer-mid-0.png" alt="">
+					<div class="footer__middle" data-aos="fade-up">
+						<div class="footer__middle-col"><a href="#"><img class="footer__middle-img" src="assets/images/footer-mid-0.png" alt=""></a>
 							<div class="footer__middle-txt">Ассоциация разработчиков, изготовителей и поставщиков средств индивидуальной защиты</div>
-						</a><a class="footer__middle-col" href><img class="footer__middle-img" src="assets/images/footer-mid-1.png" alt="">
+						</div>
+						<div class="footer__middle-col"><a href="#"><img class="footer__middle-img" src="assets/images/footer-mid-1.png" alt=""></a>
 							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рук из материала DuPont™ Kevlar® на территории РФ</div>
-						</a><a class="footer__middle-col" href><img class="footer__middle-img" src="assets/images/footer-mid-2.png" alt="">
+						</div>
+						<div class="footer__middle-col"><a href="#"><img class="footer__middle-img" src="assets/images/footer-mid-2.png" alt=""></a>
 							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рукиз материала Dyneema® Diamond Technology на территории РФ</div>
-						</a><a class="footer__middle-col" href><img class="footer__middle-img" src="assets/images/footer-mid-3.png" alt="">
+						</div>
+						<div class="footer__middle-col"><a href="#"><img class="footer__middle-img" src="assets/images/footer-mid-3.png" alt=""></a>
 							<div class="footer__middle-txt">Лицензионный партнер по программе СИЗ рук из материала Thermolite® на территории ЕАС</div>
-						</a></div>
+						</div>
+					</div>
 					<div class="footer__corp" data-aos="fade-up">
 						<div class="footer__rights">© 2008-2023 ООО «Манипула Специалист»</div><button class="footer__policy" data-client data-fancy-button="policy">Политика конфиденциальности</button>
 						<div class="footer__author">Сделано в <a href>Клаудмил</a></div>
@@ -1031,11 +1042,66 @@
 							<path d="M17.5 9.58329C17.5 13.9583 13.9583 17.5 9.58333 17.5C5.20833 17.5 1.66667 13.9583 1.66667 9.58329C1.66667 5.20829 5.20833 1.66663 9.58333 1.66663" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 							<path d="M18.3333 18.3333L16.6667 16.6666" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 						</svg></div>
-					<div class="search__input"><input type="search" name="search" placeholder="Введите запрос" autocomplete="off" data-search></div><button class="search__reset" data-search-reset><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div class="search__input"><input type="search" name="search" placeholder="Введите запрос" autocomplete="off" data-search data-search-input="search-mobile"></div><button class="search__reset" data-search-reset><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.41675 5.41663L14.5834 14.5833" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 							<path d="M5.41657 14.5833L14.5833 5.41663" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 						</svg></button>
-				</label></div>
+				</label>
+				<div id="search-grop-mobile" data-search-modal="search-mobile">
+					<div class="search-drop">
+						<div class="search-drop-list"><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+								<div>
+									<div class="search-drop-card__labels">
+										<div class="card-label red">NEW</div>
+										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+									</div>
+									<div class="search-drop-card__tag">Перчатки</div>
+									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+								</div>
+							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+								<div>
+									<div class="search-drop-card__labels">
+										<div class="card-label red">NEW</div>
+										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+									</div>
+									<div class="search-drop-card__tag">Перчатки</div>
+									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+								</div>
+							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+								<div>
+									<div class="search-drop-card__labels">
+										<div class="card-label red">NEW</div>
+										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+									</div>
+									<div class="search-drop-card__tag">Перчатки</div>
+									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+								</div>
+							</a><a class="search-drop-card" href><img src="assets/images/product-0.jpg" alt="">
+								<div>
+									<div class="search-drop-card__labels">
+										<div class="card-label red">NEW</div>
+										<div class="card-label blue"><img src="assets/images/svg/rus.svg" alt="">RUS</div>
+									</div>
+									<div class="search-drop-card__tag">Перчатки</div>
+									<div class="search-drop-card__ttl">Микропол MG-162 (ex. TPU-13)</div>
+								</div>
+							</a></div>
+						<div class="search-drop__bottom"><a class="button button--blue" href><span>Смотреть все результаты (78)</span>
+								<div class="button__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_666_9358)">
+											<path d="M4.098 3.91675L3.29457 4.72018L8.57481 9.99984L3.29457 15.2801L4.098 16.0835L10.1817 9.99984L4.098 3.91675Z" fill="white"></path>
+											<path d="M10.9163 3.91675L10.1129 4.72018L15.3931 9.99984L10.1129 15.2801L10.9163 16.0835L17 9.99984L10.9163 3.91675Z" fill="white"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_666_9358">
+												<rect width="20" height="20" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg></div>
+							</a></div>
+					</div>
+				</div>
+			</div>
 			<div class="side-modal policy-modal" id="fancy-modal-policy" style="display: none">
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs__list" data-aos="fade-up">
