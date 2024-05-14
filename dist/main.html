@@ -4,10 +4,19 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="address=no">
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="format-detection" content="address=no" />
+		<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+		<style>
+			a[x-apple-data-detectors] {
+				color: inherit !important;
+				text-decoration: none !important;
+				font-size: inherit !important;
+				font-family: inherit !important;
+				font-weight: inherit !important;
+				line-height: inherit !important;
+				pointer-events: inherit !important;
+			}
+
+		</style>
 		<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<link rel="apple-touch-icon" href="assets/images/favicon_package/favicon-apple.svg">
@@ -89,7 +98,8 @@
 									</defs>
 								</svg></div>
 						</a>
-						<div class="search-wrapper"><label class="search only-desktop" data-search-form data-search-form-cont>
+						<div class="search-wrapper">
+							<div class="header__overlay"></div><label class="search only-desktop" data-search-form data-search-form-cont>
 								<div class="search__ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11.6667 4.16663H16.6667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
 										<path d="M11.6667 6.66663H14.1667" stroke="#507E9B" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
@@ -176,7 +186,6 @@
 							</svg></button>
 					</div>
 				</div>
-				<div class="header__overlay"></div>
 			</header>
 			<main class="main">
 				<div class="container">
@@ -401,14 +410,14 @@
 												<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"></rect>
 											</clipPath>
 										</defs>
-									</svg></button><button class="slider-control dark" id="news-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									</svg></button><button class="slider-control dark" id="news-next"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_186_32492)">
 											<path d="M7.80343 3.91687L7 4.7203L12.2802 9.99997L7 15.2802L7.80343 16.0836L13.8871 9.99997L7.80343 3.91687Z" fill="#222B33"></path>
 										</g>
 										<defs>
-											<clipPath id="clip0_186_32492">
+											<clippath id="clip0_186_32492">
 												<rect width="20" height="20" fill="white"></rect>
-											</clipPath>
+											</clippath>
 										</defs>
 									</svg></button></div>
 						</div>
